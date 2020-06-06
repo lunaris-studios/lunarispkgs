@@ -16,7 +16,7 @@ jobs:
 
       - name: Build project
         run: |
-          tar -cjf lunaris-pkgs.tar.gz .
+          tar --exclude './.github' --exclude='./.vscode' -czvf filename.tar.gz .
 
       - name: Create Release
         id: create_release
