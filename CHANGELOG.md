@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **.github/workflows:** :construction: This is a test ([91014c1](https://github.com/lunaris-studios/lunaris-pkgs/commit/91014c10a40aebea0fe4a7e60adf86dbd711930a))
 
-# Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### Bug Fixes
+
+* **.versionrc:** removed trailing comma ([fc50a02](https://github.com/lunaris-studios/lunaris-pkgs/commit/fc50a02694658dd6e673944c6546aeb8789c5b04))
