@@ -1,11 +1,10 @@
-name: Create A Pre-release
+name: Create A Release
 
 on:
+  pull_request:
   push:
     branches:
-      - pre-release
-    tags:
-    - 'v*'
+      - master
     
 jobs:
   deploy:
