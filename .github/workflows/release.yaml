@@ -1,26 +1,28 @@
-name: Create A Release
-
+name: Release
 on:
   pull_request:
   push:
     branches:
       - master
-    
+      - next
+      - beta
+      - alpha
+      
 jobs:
-  deploy:
+  release:
+    name: Release
     runs-on: ubuntu-18.04
     steps:
-
-      - name: Setup Action
+      - name: Checkout
         uses: actions/checkout@v1
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
