@@ -1,0 +1,38 @@
+{
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "f73bf8d584148677b01859677a63191c31911eae",
+        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "master",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e4f445008e0ecbd69d06ad3f5a5531ee53954b31",
+        "sha256": "1jgw5lyfxlfa7qdxfpx2kgl0sldy06xjq7zi76rx4381vp37z5l4",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/e4f445008e0ecbd69d06ad3f5a5531ee53954b31.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "skaffold": {
+        "branch": "master",
+        "description": "Easy and Repeatable Kubernetes Development",
+        "homepage": "https://skaffold.dev/",
+        "owner": "GoogleContainerTools",
+        "repo": "skaffold",
+        "rev": "3bd8eb4eb7caf9af62a4d1cc851022e10fc331d3",
+        "sha256": "0wnz3v4yzzvn5pgr228s8d4v60841kdmla0k63is45xp239m351h",
+        "type": "tarball",
+        "url": "https://github.com/GoogleContainerTools/skaffold/archive/3bd8eb4eb7caf9af62a4d1cc851022e10fc331d3.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
