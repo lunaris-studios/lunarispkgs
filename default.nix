@@ -1,6 +1,9 @@
 { packages ? import ./packages {} }:
 {
   inherit (packages)
+    go_1_14_2
+    go
+
     skaffold_1_10_1
     skaffold_1_10_0
     skaffold
