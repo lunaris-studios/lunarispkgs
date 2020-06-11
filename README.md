@@ -16,13 +16,22 @@
 | `nodejs`   | <ul><li><a href="./pkgs/nodejs/nodejs-10.19.0">10.19.0</a></li></ul>    |
 | `skaffold` | <ul><li><a href="./pkgs/skaffold/skaffold-10.19.0">1.10.1</a></li></ul> |
 
+## Get Started
+
+1. [Install Nix](#installing-nix)
+2. Install ***lunaris-pkgs*** for your environment
+   - [Nix Channels](#nix-channels)
+   - [Niv](#niv)
+
 ## Installing Nix
 
 ```bash
 $ curl -L https://nixos.org/nix/install | sh
 ```
 
-## Usage
+# Installation
+
+## Nix Channels
 
 Subscribe to the **lunaris-pkgs** custom channel
 
@@ -34,4 +43,43 @@ Import the channel in your derivations
 
 ```nix
 lunarispkgs = import <lunarispkgs> {};
+```
+
+## Niv
+
+`niv` is available in [nixpkgs](https://github.com/NixOS/nixpkgs) on the master branch as `niv`. It is also available on the release-19.09 branch as `haskellPackages.niv`. Otherwise, run:
+
+```bash
+nix-env -iA niv -f https://github.com/nmattia/niv/tarball/master \
+    --substituters https://niv.cachix.org \
+    --trusted-public-keys niv.cachix.org-1:X32PCg2e/zAm3/uD1ScqW2z/K0LtDyNV7RdaxIuLgQM=
+```
+
+If you're using `home-manager`, you can add it to your `home.nix` profile via the [nixpkgs](https://github.com/NixOS/nixpkgs) channel.
+
+```nix
+home.packages = with pkgs; [
+  niv
+  ...
+];
+```
+
+In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `lunaris-pkgs` by running the following:
+
+```bash
+niv add lunaris-studios/lunaris-pkgs
+```
+
+This will pull directly fromt the `master` branch. You can target a specific branch by applying the `-b <BRANCH>` flag:
+
+```bash
+niv add lunaris-studios/lunaris-pkgs -b alpha
+```
+
+You can add a specific version of the collection via:
+
+```bash
+niv add lunaris-pkgs \
+  -v 1.1.0-alpha.1 \
+  -t "https://github.com/lunaris-studios/lunaris-pkgs/archive/v<version>.tar.gz"
 ```
