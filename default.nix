@@ -1,1 +1,1 @@
-import ./packges {}
+import ./packages.nix

@@ -1,10 +1,10 @@
-{ nixpkgs ? import ./nix {}, packages ? import ./packages.nix {} }:
+{ nixpkgs ? import ./nix {}, lunarispkgs ? import ./packages.nix {} }:
 nixpkgs.mkShell rec {
-  name = "lunaris-pkgs";
+  name = "lunarispkgs";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-    packages.go
-    packages.nodejs
-    packages.skaffold
+    lunarispkgs.go
+    lunarispkgs.nodejs
+    lunarispkgs.skaffold
   ];
 }
