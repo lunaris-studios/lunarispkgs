@@ -22,17 +22,5 @@
         "type": "tarball",
         "url": "https://github.com/NixOS/nixpkgs/archive/e4f445008e0ecbd69d06ad3f5a5531ee53954b31.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "skaffold": {
-        "branch": "master",
-        "description": "Easy and Repeatable Kubernetes Development",
-        "homepage": "https://skaffold.dev/",
-        "owner": "GoogleContainerTools",
-        "repo": "skaffold",
-        "rev": "3bd8eb4eb7caf9af62a4d1cc851022e10fc331d3",
-        "sha256": "0wnz3v4yzzvn5pgr228s8d4v60841kdmla0k63is45xp239m351h",
-        "type": "tarball",
-        "url": "https://github.com/GoogleContainerTools/skaffold/archive/3bd8eb4eb7caf9af62a4d1cc851022e10fc331d3.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
