@@ -33,11 +33,19 @@
 		},
 		{
 			"name": "[GO]",
-			"path": "../pkgs/go"
+			"path": "../src/pkgs/go"
+		},
+		{
+			"name": "[GOOGLE-CLOUD-SDK]",
+			"path": "../src/pkgs/google-cloud-sdk"
 		},
 		{
 			"name": "[NODEJS]",
-			"path": "../pkgs/nodejs"
+			"path": "../src/pkgs/nodejs"
+		},
+		{
+			"name": "[SKAFFOLD]",
+			"path": "../src/pkgs/skaffold"
 		}
 	],
 }
