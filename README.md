@@ -10,16 +10,18 @@
 
 ## Packages
 
-| Packages   | Versions                                                                |
-| ---------- | ----------------------------------------------------------------------- |
-| `go`       | <ul><li><a href="./pkgs/go/go-10.19.0">1.14.2</a> (go_1_14_2)</li></ul>             |
-| `nodejs`   | <ul><li><a href="./pkgs/nodejs/nodejs-10.19.0">10.19.0</a></li></ul>    |
-| `skaffold` | <ul><li><a href="./pkgs/skaffold/skaffold-10.19.0">1.10.1</a></li></ul> |
+| Packages           | Versions                                                                                        |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| `go`               | <ul><li>1.14.2 (go_1_14_2)</li></ul>                                                            |
+| `google-cloud-sdk` | <ul><li>268.0.0 (google-cloud-sdk_268_0_0)</li></ul>                                            |
+| `openjdk`          | <ul><li>14.0.1 (openjdk_14)</li><li>11.0.6 (openjdk_11)</li><li>1.8.0_242 (openjdk_8)</li></ul> |
+| `nodejs`           | <ul><li>10.19.0 (nodejs_10_19_0)</li></ul>                                                      |
+| `skaffold`         | <ul><li>1.10.1 (skaffold_1_10_1)</li><li>1.10.0 (skaffold_1_10_0)</li></ul>                     |
 
 ## Get Started
 
 1. [Install Nix](#installing-nix)
-2. Install ***lunaris-pkgs*** for your environment
+2. Install **_lunaris-pkgs_** for your environment
    - [Nix Channels](#nix-channels)
    - [Niv](#niv)
 
