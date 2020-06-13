@@ -1,7 +1,21 @@
-{ stdenv, fetchurl, tzdata, iana-etc, runCommand
-, perl, which, pkgconfig, patch, procps, pcre, cacert, Security, Foundation
-, mailcap, runtimeShell
-, buildPackages, pkgsTargetTarget
+{ stdenv
+, fetchurl
+, tzdata
+, iana-etc
+, runCommand
+, perl
+, which
+, pkgconfig
+, patch
+, procps
+, pcre
+, cacert
+, Security
+, Foundation
+, mailcap
+, runtimeShell
+, buildPackages
+, pkgsTargetTarget
 }:
 
 with stdenv.lib;

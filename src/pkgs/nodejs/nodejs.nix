@@ -1,10 +1,27 @@
-{ stdenv, fetchurl, openssl, python, zlib, libuv, utillinux, http-parser
-, pkgconfig, which
+{ stdenv
+, fetchurl
+, openssl
+, python
+, zlib
+, libuv
+, utillinux
+, http-parser
+, pkgconfig
+, which
 # Updater dependencies
-, writeScript, coreutils, gnugrep, jq, curl, common-updater-scripts, nix, runtimeShell
+, writeScript
+, coreutils
+, gnugrep
+, jq
+, curl
+, common-updater-scripts
+, nix
+, runtimeShell
 , gnupg
-, darwin, xcbuild
-, procps, icu
+, darwin
+, xcbuild
+, procps
+, icu
 }:
 
 with stdenv.lib;
