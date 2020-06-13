@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: none;">🌙📦 lunaris-pkgs</h1>
+<h1 align="center" style="border-bottom: none;">🌙📦 lunarispkgs</h1>
 <h3 align="center">A Nix package channel for Lunaris Studios development</h3>
 <p align="center">
   <a href="#badge">
@@ -6,7 +6,7 @@
   </a>
 </p>
 
-**lunaris-pkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Lunaris Studios, we've implemented our own custom package channel quick and iterative development via **Nix**.
+**lunarispkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Lunaris Studios, we've implemented our own custom package channel quick and iterative development via **Nix**.
 
 ## Packages
 
@@ -20,8 +20,10 @@
 
 ## Get Started
 
+> Our home management system, [Casa](https://github.com/lunaris-studios/casa), is shipped with the highest level revisions for all `lunarispkgs` packages.
+
 1. [Install Nix](#installing-nix)
-2. Install **_lunaris-pkgs_** for your environment
+2. Install **_lunarispkgs_** for your environment
    - [Nix Channels](#nix-channels)
    - [Niv](#niv)
 
@@ -35,7 +37,7 @@ $ curl -L https://nixos.org/nix/install | sh
 
 ## Nix Channels
 
-Subscribe to the **lunaris-pkgs** custom channel
+Subscribe to the **lunarispkgs** custom channel
 
 ```bash
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable lunarispkgs
@@ -66,22 +68,22 @@ home.packages = with pkgs; [
 ];
 ```
 
-In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `lunaris-pkgs` by running the following:
+In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `lunarispkgs` by running the following:
 
 ```bash
-niv add lunaris-studios/lunaris-pkgs
+niv add lunaris-studios/lunarispkgs
 ```
 
 This will pull directly fromt the `master` branch. You can target a specific branch by applying the `-b <BRANCH>` flag:
 
 ```bash
-niv add lunaris-studios/lunaris-pkgs -b alpha
+niv add lunaris-studios/lunarispkgs -b alpha
 ```
 
 You can add a specific version of the collection via:
 
 ```bash
-niv add lunaris-pkgs \
+niv add lunarispkgs \
   -v 1.1.0-alpha.1 \
-  -t "https://github.com/lunaris-studios/lunaris-pkgs/archive/v<version>.tar.gz"
+  -t "https://github.com/lunaris-studios/lunarispkgs/archive/v<version>.tar.gz"
 ```
