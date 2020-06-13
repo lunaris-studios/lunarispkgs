@@ -7,6 +7,6 @@ nixpkgs.mkShell rec {
     lunarispkgs.nodejs
     lunarispkgs.skaffold
     lunarispkgs.openjdk
-    lunarispkgs.google-cloud-sdk-gce
+    lunarispkgs.google-cloud-sdk
   ];
 }
