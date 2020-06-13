@@ -4,6 +4,14 @@ let
   package = p: v: { ... } @args: callPackage (./. + "/src/pkgs/${p}/versions/${v}.nix") ( args // {});
 in
 rec {
+  bazel = bazel_3;
+  bazel_3 = package "bazel" "3.2.0" {
+    buildJdk = openjdk_8;
+    buildJdkName = "jdk8";
+    runJdk = openjdk_11_headless;
+    bazelSelf = bazel_3;
+  };
+
   go = go_1_14_2;
   go_1_14_2 = package "go" "1.14.2" {};
 
