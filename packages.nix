@@ -29,12 +29,6 @@ rec {
   openjdk_8 = nixpkgs.pkgs.openjdk8;
   openjdk_8_headless = nixpkgs.pkgs.openjdk8_headless;
 
-  nodejs = nodejs_10_19_0;
-  nodejs_10_19_0 = package "nodejs" "10.19.0" {};
-  
-  oraclejdk = oraclejdk_8;
-  oraclejdk_8 = package "oraclejdk" "8" {};
-
   python = python_3_7_7;
   python_3_7_7 = nixpkgs.pkgs.python37;
 
