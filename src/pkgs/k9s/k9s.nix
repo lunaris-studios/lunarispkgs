@@ -4,6 +4,7 @@
 
 buildGoModule rec {
   inherit version;
+  
   pname = "k9s";
 
   src = fetchFromGitHub {
