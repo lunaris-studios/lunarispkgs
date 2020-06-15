@@ -6,6 +6,7 @@ nixpkgs.mkShell rec {
     lunarispkgs.bazel
     lunarispkgs.go
     lunarispkgs.google-cloud-sdk
+    lunarispkgs.k9s
     lunarispkgs.nodejs
     lunarispkgs.openjdk
     lunarispkgs.python
