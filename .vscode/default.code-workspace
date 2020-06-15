@@ -18,13 +18,7 @@
 			"statusBar.border": "#007fff",
 			"titleBar.border": "#007fff"
 		},
-		"peacock.remoteColor": "#007fff",
-		// "typescript.tsdk": "Main [Client] (Frontend)/node_modules/typescript/lib",
-		"protoc": {
-			"options": [
-				"--proto_path=${workspaceRoot}/proto",
-			]
-		},
+		"peacock.remoteColor": "#007fff"
 	},
 	"folders": [
 		{
