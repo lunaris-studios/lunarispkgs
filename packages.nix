@@ -20,6 +20,9 @@ rec {
   google-cloud-sdk_268_0_0 = package "google-cloud-sdk" "268.0.0" {};
   google-cloud-sdk-gce_268_0_0 = google-cloud-sdk.override { withGce = true; };
 
+  helm = helm_3_2_1;
+  helm_3_2_1 = package "helm" "3.2.1" {};
+
   k9s = k9s_0_19_4;
   k9s_0_19_4 = package "k9s" "0.19.4" {};
 
