@@ -5,9 +5,10 @@ nixpkgs.mkShell rec {
   buildInputs = [
     lunarispkgs.bazel
     lunarispkgs.go
-    lunarispkgs.nodejs
-    lunarispkgs.skaffold
-    lunarispkgs.openjdk
     lunarispkgs.google-cloud-sdk
+    lunarispkgs.nodejs
+    lunarispkgs.openjdk
+    lunarispkgs.python
+    lunarispkgs.skaffold
   ];
 }

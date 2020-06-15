@@ -28,12 +28,15 @@ rec {
   openjdk_11_headless = nixpkgs.pkgs.openjdk11_headless;
   openjdk_8 = nixpkgs.pkgs.openjdk8;
   openjdk_8_headless = nixpkgs.pkgs.openjdk8_headless;
+
+  nodejs = nodejs_10_19_0;
+  nodejs_10_19_0 = package "nodejs" "10.19.0" {};
   
   oraclejdk = oraclejdk_8;
   oraclejdk_8 = package "oraclejdk" "8" {};
 
-  nodejs = nodejs_10_19_0;
-  nodejs_10_19_0 = package "nodejs" "10.19.0" {};
+  python = python_3_7_7;
+  python_3_7_7 = nixpkgs.pkgs.python37;
 
   skaffold = skaffold_1_10_1;
   skaffold_1_10_1 = package "skaffold" "1.10.1" {};
