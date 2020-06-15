@@ -1,7 +1,7 @@
 {
   branches: [
     'master', 
-    'next', 
+    'develop', 
     {name: 'alpha', prerelease: true}
   ],
   plugins: [

@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - master
-      - next
-      - beta
+      - develop
       - alpha
       
 jobs:
