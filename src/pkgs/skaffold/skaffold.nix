@@ -38,6 +38,5 @@ buildGoPackage rec {
     description = "Easy and Repeatable Kubernetes Development";
     homepage = "https://skaffold.dev/";
     license = licenses.asl20;
-    maintainers = with maintainers; [ samcraigdev ];
   };
 }
