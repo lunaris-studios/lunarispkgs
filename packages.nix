@@ -12,6 +12,9 @@ rec {
     bazelSelf = bazel_3_2_0;
   };
 
+  mirror = mirror_1_7_2;
+  mirror_1_7_2 = package "mirror" "1.7.2" {};
+
   go = go_1_14_2;
   go_1_14_2 = package "go" "1.14.2" {};
 
@@ -22,6 +25,9 @@ rec {
 
   helm = helm_3_2_1;
   helm_3_2_1 = package "helm" "3.2.1" {};
+
+  jq = jq_1_6;
+  jq_1_6 = package "jq" "1.6" {};
 
   k9s = k9s_0_19_4;
   k9s_0_19_4 = package "k9s" "0.19.4" {};
