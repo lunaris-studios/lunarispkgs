@@ -14,6 +14,7 @@
 | ------------------ | ----------------------------------------------------------------------------------------------- |
 | `bazel`            | <ul><li>3.2.0 (bazel_3_2_0)</li></ul>                                                           |
 | `go`               | <ul><li>1.14.2 (go_1_14_2)</li></ul>                                                            |
+| `golangci-lint`    | <ul><li>1.27.0 (golangci-lint_1_27_0)</li></ul>                                                 | 
 | `google-cloud-sdk` | <ul><li>268.0.0 (google-cloud-sdk_268_0_0)</li></ul>                                            |
 | `nodejs`           | <ul><li>10.19.0 (nodejs_10_19_0)</li></ul>                                                      |
 | `openjdk`          | <ul><li>14.0.1 (openjdk_14)</li><li>11.0.6 (openjdk_11)</li><li>1.8.0_242 (openjdk_8)</li></ul> |
