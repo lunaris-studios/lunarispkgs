@@ -4,12 +4,10 @@
 
 buildGoModule rec {
   inherit version;
-  
   pname = "k9s";
 
   src = fetchFromGitHub {
     inherit sha256;
-
     owner  = "derailed";
     repo   = "k9s";
     rev    = "v${version}";

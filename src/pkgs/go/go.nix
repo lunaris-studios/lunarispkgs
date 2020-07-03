@@ -20,7 +20,8 @@
 
 with stdenv.lib;
 
-{ version, sha256 } @args:
+{ version
+, sha256 } @args:
 
 let
 
@@ -147,19 +148,19 @@ stdenv.mkDerivation rec {
   '';
 
   patches = [
-    ./remove-tools-1.11.patch
-    ./ssl-cert-file-1.13.patch
-    ./remove-test-pie-1.14.patch
-    ./creds-test.patch
-    ./go-1.9-skip-flaky-19608.patch
-    ./go-1.9-skip-flaky-20072.patch
-    ./skip-external-network-tests.patch
-    ./skip-nohup-tests.patch
+    ./patch/remove-tools-1.11.patch
+    ./patch/ssl-cert-file-1.13.patch
+    ./patch/remove-test-pie-1.14.patch
+    ./patch/creds-test.patch
+    ./patch/go-1.9-skip-flaky-19608.patch
+    ./patch/go-1.9-skip-flaky-20072.patch
+    ./patch/skip-external-network-tests.patch
+    ./patch/skip-nohup-tests.patch
   ] ++ [
     # breaks under load: https://github.com/golang/go/issues/25628
     (if stdenv.isAarch32
-    then ./skip-test-extra-files-on-aarch32-1.14.patch
-    else ./skip-test-extra-files-on-386-1.14.patch)
+    then ./patch/skip-test-extra-files-on-aarch32-1.14.patch
+    else ./patch/skip-test-extra-files-on-386-1.14.patch)
   ];
 
   postPatch = ''
@@ -256,7 +257,6 @@ stdenv.mkDerivation rec {
     homepage = "http://golang.org/";
     description = "The Go Programming language";
     license = licenses.bsd3;
-    maintainers = with maintainers; [ cstrahan orivej mic92 rvolosatovs kalbasit Frostman ];
     platforms = platforms.linux ++ platforms.darwin;
   };
 }

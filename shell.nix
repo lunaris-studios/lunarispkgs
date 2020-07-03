@@ -5,6 +5,7 @@ nixpkgs.mkShell rec {
   buildInputs = [
     lunarispkgs.bazel
     lunarispkgs.go
+    lunarispkgs.golangci-lint
     lunarispkgs.google-cloud-sdk
     lunarispkgs.helm
     lunarispkgs.jq

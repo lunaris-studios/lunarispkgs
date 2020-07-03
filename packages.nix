@@ -18,6 +18,9 @@ rec {
   go = go_1_14_2;
   go_1_14_2 = package "go" "1.14.2" {};
 
+  golangci-lint = golangci-lint_1_27_0;
+  golangci-lint_1_27_0 = package "golangci-lint" "1.27.0" {};
+
   google-cloud-sdk = google-cloud-sdk_268_0_0;
   google-cloud-sdk-gce = google-cloud-sdk-gce_268_0_0;
   google-cloud-sdk_268_0_0 = package "google-cloud-sdk" "268.0.0" {};
