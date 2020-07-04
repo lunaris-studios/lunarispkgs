@@ -1,11 +1,11 @@
 { callPackage
-, withGce ? false 
-}:
-  let
-    buildCloudsdk = callPackage ../google-cloud-sdk.nix {
-      inherit withGce;
-    };
-  in
-    buildCloudsdk {
-      version = "286.0.0";
-    }
+, withGce ? false }:
+
+let
+  build = callPackage ../google-cloud-sdk.nix {
+    inherit withGce;
+  };
+in
+  build {
+    version = "286.0.0";
+  }

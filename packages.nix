@@ -15,8 +15,8 @@ rec {
   # mirror = mirror_1_7_2;
   # mirror_1_7_2 = package "mirror" "1.7.2" {};
 
-  go = go_1_14_2;
-  go_1_14_2 = package "go" "1.14.2" {};
+  go = go_1_14_4;
+  go_1_14_4 = nixpkgs.pkgs.go_1_14; 
 
   golangci-lint = golangci-lint_1_27_0;
   golangci-lint_1_27_0 = package "golangci-lint" "1.27.0" {};
