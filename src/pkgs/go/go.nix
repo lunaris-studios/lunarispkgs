@@ -16,23 +16,21 @@
 , runtimeShell
 , buildPackages
 , pkgsTargetTarget
-}:
+, fetchpatch }:
 
-with stdenv.lib;
-
-{ version, sha256 } @args:
+{ version
+, sha256 } @args:
 
 let
-
   inherit (stdenv.lib) optionals optionalString;
 
-  goBootstrap = runCommand "go-bootstrap" {} ''
-    mkdir $out
-    cp -rf ${buildPackages.go_bootstrap}/* $out/
-    chmod -R u+w $out
-    find $out -name "*.c" -delete
-    cp -rf $out/bin/* $out/share/go/bin/
-  '';
+  # goBootstrap = runCommand "go-bootstrap" {} ''
+  #   mkdir $out
+  #   cp -rf ${buildPackages.go_bootstrap}/* $out/
+  #   chmod -R u+w $out
+  #   find $out -name "*.c" -delete
+  #   cp -rf $out/bin/* $out/share/go/bin/
+  # '';
 
   goarch = platform: {
     "i686" = "386";
@@ -47,12 +45,14 @@ let
 in
 
 stdenv.mkDerivation rec {
-  pname = "go";
   inherit version;
 
+  pname = "go";
+
   src = fetchurl {
-    url = "https://dl.google.com/go/go${version}.src.tar.gz";
     inherit sha256;
+    
+    url = "https://dl.google.com/go/go${version}.src.tar.gz";
   };
 
   # perl is used for testing go vet
@@ -147,19 +147,25 @@ stdenv.mkDerivation rec {
   '';
 
   patches = [
-    ./remove-tools-1.11.patch
-    ./ssl-cert-file-1.13.patch
-    ./remove-test-pie-1.14.patch
-    ./creds-test.patch
-    ./go-1.9-skip-flaky-19608.patch
-    ./go-1.9-skip-flaky-20072.patch
-    ./skip-external-network-tests.patch
-    ./skip-nohup-tests.patch
+    ./patch/remove-tools-1.11.patch
+    ./patch/ssl-cert-file-1.13.patch
+    ./patch/remove-test-pie-1.14.patch
+    ./patch/creds-test.patch
+    ./patch/go-1.9-skip-flaky-19608.patch
+    ./patch/go-1.9-skip-flaky-20072.patch
+    ./patch/skip-external-network-tests.patch
+    ./patch/skip-nohup-tests.patch
+
+    # fix rare TestDontCacheBrokenHTTP2Conn failure
+    (fetchpatch {
+      url = "https://github.com/golang/go/commit/ea1437a8cdf6bb3c2d2447833a5d06dbd75f7ae4.patch";
+      sha256 = "1lyzy4nf8c34a966vw45j3j7hzpvncq2gqspfxffzkyh17xd8sgy";
+    })
   ] ++ [
     # breaks under load: https://github.com/golang/go/issues/25628
     (if stdenv.isAarch32
-    then ./skip-test-extra-files-on-aarch32-1.14.patch
-    else ./skip-test-extra-files-on-386-1.14.patch)
+    then ./patch/skip-test-extra-files-on-aarch32-1.14.patch
+    else ./patch/skip-test-extra-files-on-386-1.14.patch)
   ];
 
   postPatch = ''
@@ -195,7 +201,7 @@ stdenv.mkDerivation rec {
   # Some tests assume things like home directories and users exists
   GO_BUILDER_NAME = "nix";
 
-  GOROOT_BOOTSTRAP="${goBootstrap}/share/go";
+  # GOROOT_BOOTSTRAP="${goBootstrap}/share/go";
 
   postConfigure = ''
     export GOCACHE=$TMPDIR/go-cache
@@ -247,16 +253,12 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  setupHook = ./setup-hook.sh;
-
-  disallowedReferences = [ goBootstrap ];
+  # disallowedReferences = [ goBootstrap ];
 
   meta = with stdenv.lib; {
-    branch = "1.14";
     homepage = "http://golang.org/";
     description = "The Go Programming language";
     license = licenses.bsd3;
-    maintainers = with maintainers; [ cstrahan orivej mic92 rvolosatovs kalbasit Frostman ];
     platforms = platforms.linux ++ platforms.darwin;
   };
 }

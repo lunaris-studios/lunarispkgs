@@ -1,6 +1,10 @@
-{ stdenv, buildGoModule, fetchFromGitHub, installShellFiles }:
+{ stdenv
+, buildGoModule
+, fetchFromGitHub
+, installShellFiles }:
 
-{ version, sha256 } @args:
+{ version
+, sha256 } @args:
 
 buildGoModule rec {
   inherit version;

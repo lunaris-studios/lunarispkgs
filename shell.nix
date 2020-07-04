@@ -2,16 +2,17 @@
 nixpkgs.mkShell rec {
   name = "lunarispkgs";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
-  buildInputs = [
-    lunarispkgs.bazel
-    lunarispkgs.go
-    lunarispkgs.google-cloud-sdk
-    lunarispkgs.helm
-    lunarispkgs.jq
-    lunarispkgs.k9s
-    lunarispkgs.nodejs
-    lunarispkgs.openjdk
-    lunarispkgs.python
-    lunarispkgs.skaffold
+  buildInputs = with lunarispkgs; [
+    bazel
+    go
+    golangci-lint
+    google-cloud-sdk
+    helm
+    jq
+    k9s
+    nodejs
+    openjdk
+    python
+    skaffold
   ];
 }

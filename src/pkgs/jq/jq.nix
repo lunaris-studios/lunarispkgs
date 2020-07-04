@@ -1,9 +1,13 @@
-{ stdenv, fetchurl, oniguruma }:
+{ stdenv
+, fetchurl
+, oniguruma }:
 
-{ version, sha256 } @args:
+{ version
+, sha256 } @args:
 
 stdenv.mkDerivation rec {
   inherit version;
+  
   pname = "jq";
 
   src = fetchurl {

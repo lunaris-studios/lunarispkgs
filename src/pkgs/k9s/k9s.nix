@@ -1,15 +1,16 @@
-{ stdenv, buildGoModule, fetchFromGitHub }:
+{ stdenv
+, buildGoModule
+, fetchFromGitHub }:
 
-{ version, sha256 } @args:
+{ version
+, sha256 } @args:
 
 buildGoModule rec {
   inherit version;
-  
   pname = "k9s";
 
   src = fetchFromGitHub {
     inherit sha256;
-
     owner  = "derailed";
     repo   = "k9s";
     rev    = "v${version}";

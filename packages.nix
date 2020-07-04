@@ -12,11 +12,14 @@ rec {
     bazelSelf = bazel_3_2_0;
   };
 
-  mirror = mirror_1_7_2;
-  mirror_1_7_2 = package "mirror" "1.7.2" {};
+  # mirror = mirror_1_7_2;
+  # mirror_1_7_2 = package "mirror" "1.7.2" {};
 
-  go = go_1_14_2;
-  go_1_14_2 = package "go" "1.14.2" {};
+  go = go_1_14_4;
+  go_1_14_4 = nixpkgs.pkgs.go_1_14; 
+
+  golangci-lint = golangci-lint_1_27_0;
+  golangci-lint_1_27_0 = package "golangci-lint" "1.27.0" {};
 
   google-cloud-sdk = google-cloud-sdk_268_0_0;
   google-cloud-sdk-gce = google-cloud-sdk-gce_268_0_0;
@@ -47,7 +50,8 @@ rec {
   python = python_3_7_7;
   python_3_7_7 = nixpkgs.pkgs.python37;
 
-  skaffold = skaffold_1_10_1;
+  skaffold = skaffold_1_11_0;
+  skaffold_1_11_0 = package "skaffold" "1.11.0" {};
   skaffold_1_10_1 = package "skaffold" "1.10.1" {};
   skaffold_1_10_0 = package "skaffold" "1.10.0" {};
 }
