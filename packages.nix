@@ -12,8 +12,8 @@ rec {
     bazelSelf = bazel_3_2_0;
   };
 
-  # mirror = mirror_1_7_2;
-  # mirror_1_7_2 = package "mirror" "1.7.2" {};
+  mirror = mirror_1_0_2;
+  mirror_1_0_2 = package "mirror" "1.0.2" {};
 
   go = go_1_14_4;
   go_1_14_4 = nixpkgs.pkgs.go_1_14; 

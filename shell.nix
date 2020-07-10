@@ -10,6 +10,7 @@ nixpkgs.mkShell rec {
     helm
     jq
     k9s
+    mirror
     nodejs
     openjdk
     python
