@@ -26,12 +26,36 @@
 			"path": ".."
 		},
 		{
+			"name": "[BAZEL]",
+			"path": "../src/pkgs/bazel"
+		},
+		{
 			"name": "[GO]",
 			"path": "../src/pkgs/go"
 		},
 		{
+			"name": "[GOLANGCI-LINT]",
+			"path": "../src/pkgs/golangci-lint"
+		},
+		{
 			"name": "[GOOGLE-CLOUD-SDK]",
 			"path": "../src/pkgs/google-cloud-sdk"
+		},
+		{
+			"name": "[HELM]",
+			"path": "../src/pkgs/helm"
+		},
+		{
+			"name": "[JQ]",
+			"path": "../src/pkgs/jq"
+		},
+		{
+			"name": "[K9S]",
+			"path": "../src/pkgs/k9s"
+		},
+		{
+			"name": "[MIRROR]",
+			"path": "../src/pkgs/mirror"
 		},
 		{
 			"name": "[NODEJS]",
