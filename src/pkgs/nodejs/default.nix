@@ -26,7 +26,10 @@
 
 with stdenv.lib;
 
-{ enableNpm ? true, version, sha256, patches ? [] } @args:
+{ enableNpm ? true
+, version
+, sha256
+, patches ? [] } @args:
 
 let
   inherit (darwin.apple_sdk.frameworks) CoreServices ApplicationServices;

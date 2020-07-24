@@ -50,6 +50,20 @@ rec {
   python = python_3_7_7;
   python_3_7_7 = nixpkgs.pkgs.python37;
 
+  rust = rust_1_43_0;
+  rust_packages = rust.packages.stable;
+  rust_1_43_0 = nixpkgs.pkgs.rust_1_43;
+  rust_1_43_0_packages = rust_1_43_0.packages.stable;
+
+  cargo = cargo_1_43_0;
+  cargo_1_43_0 = rust_1_43_0_packages.cargo;
+
+  clippy = clippy_1_43_0;
+  clippy_1_43_0 = rust_1_43_0_packages.clippy;
+
+  rustc = rustc_1_43_0;
+  rustc_1_43_0 = rust_1_43_0_packages.rustc;
+
   skaffold = skaffold_1_11_0;
   skaffold_1_11_0 = package "skaffold" "1.11.0" {};
   skaffold_1_10_1 = package "skaffold" "1.10.1" {};
