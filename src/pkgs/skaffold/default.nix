@@ -1,6 +1,11 @@
-{ lib, buildGoPackage, fetchFromGitHub, installShellFiles }:
+{ lib
+, buildGoPackage
+, fetchFromGitHub
+, installShellFiles }:
 
-{ version, revision, sha256 } @args:
+{ version
+, revision
+, sha256 } @args:
 
 buildGoPackage rec {
   inherit version;
