@@ -1,7 +1,7 @@
 { callPackage, stdenv }:
 
 let
-  build = callPackage ../mirror.nix {};
+  build = callPackage ../default.nix {};
 in
   build {
     version = "1.0.2";

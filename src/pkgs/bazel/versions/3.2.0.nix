@@ -7,7 +7,7 @@
 , stdenv }:
 
 let
-  build = callPackage ../bazel.nix {
+  build = callPackage ../default.nix {
     inherit (darwin) cctools;
     inherit (darwin.apple_sdk.frameworks) CoreFoundation CoreServices Foundation;
     inherit buildJdk runJdk bazelSelf buildJdkName;

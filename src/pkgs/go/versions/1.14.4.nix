@@ -4,7 +4,7 @@
 , gcc8Stdenv }:
 
 let
-  build = callPackage ../go.nix {
+  build = callPackage ../default.nix {
     inherit (darwin.apple_sdk.frameworks) Security Foundation;
   };
 in

@@ -1,7 +1,7 @@
 { callPackage }:
 
 let
-  build = callPackage ../skaffold.nix { };
+  build = callPackage ../default.nix { };
 in
   build {
     version = "1.11.0";

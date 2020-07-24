@@ -1,7 +1,7 @@
 { callPackage }:
 
 let
-  build = callPackage ../golangci-lint.nix {};
+  build = callPackage ../default.nix {};
 in
   build {
     version = "1.27.0";

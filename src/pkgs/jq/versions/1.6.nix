@@ -1,7 +1,7 @@
 { callPackage }:
 
 let
-  build = callPackage ../jq.nix {};
+  build = callPackage ../default.nix {};
 in
   build {
     version = "1.6";

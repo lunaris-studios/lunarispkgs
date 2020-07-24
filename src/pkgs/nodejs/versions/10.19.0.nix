@@ -5,7 +5,7 @@
 , enableNpm ? true }:
 
 let
-  build = callPackage ../nodejs.nix { 
+  build = callPackage ../default.nix { 
     inherit openssl icu;
     python = python2;
   };

@@ -1,7 +1,7 @@
 { callPackage }:
 
 let
-  build = callPackage ../k9s.nix {};
+  build = callPackage ../default.nix {};
 in
   build {
     version = "0.19.4";

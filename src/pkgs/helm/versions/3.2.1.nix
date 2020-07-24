@@ -1,7 +1,7 @@
 { callPackage }:
 
 let
-  build = callPackage ../helm.nix {};
+  build = callPackage ../default.nix {};
 in
   build {
     version = "3.2.1";

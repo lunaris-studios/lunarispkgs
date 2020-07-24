@@ -2,7 +2,7 @@
 , withGce ? false }:
 
 let
-  build = callPackage ../google-cloud-sdk.nix {
+  build = callPackage ../default.nix {
     inherit withGce;
   };
 in

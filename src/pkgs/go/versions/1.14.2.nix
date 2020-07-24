@@ -5,7 +5,7 @@
 , gcc8Stdenv }:
 
 let
-  build = callPackage ../go.nix ({
+  build = callPackage ../default.nix ({
     inherit (darwin.apple_sdk.frameworks) Security Foundation;
   } // stdenv.lib.optionalAttrs stdenv.isAarch64 {
     stdenv = gcc8Stdenv;
