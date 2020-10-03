@@ -65,7 +65,8 @@ rec {
   rustc = rustc_1_43_0;
   rustc_1_43_0 = rust_1_43_0_packages.rustc;
 
-  skaffold = skaffold_1_11_0;
+  skaffold = skaffold_1_15_0;
+  skaffold_1_15_0 = package "skaffold" "1.15.0" {};
   skaffold_1_11_0 = package "skaffold" "1.11.0" {};
   skaffold_1_10_1 = package "skaffold" "1.10.1" {};
   skaffold_1_10_0 = package "skaffold" "1.10.0" {};
