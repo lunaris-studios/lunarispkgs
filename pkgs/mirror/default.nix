@@ -19,7 +19,7 @@ buildGoModule rec {
       sha256
     ;
     
-    owner  = "lunaris-studios";
+    owner  = "toyboxco";
     repo   = "mirror";
     rev    = "v${version}";
   };
@@ -29,12 +29,12 @@ buildGoModule rec {
   buildFlagsArray = ''
     -ldflags=
       -s -w
-      -X github.com/lunaris-studios/mirror/release.version=${version}
+      -X github.com/toyboxco/mirror/release.version=${version}
   '';
 
   meta = with stdenv.lib; {
     description = " A command-line utility that creates projects from mirrors (project templates).";
-    homepage = "https://github.com/lunaris-studios/mirror";
+    homepage = "https://github.com/toyboxco/mirror";
     license = licenses.mit;
   };
 }
