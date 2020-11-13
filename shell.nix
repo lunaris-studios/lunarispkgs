@@ -1,25 +1,25 @@
 { nixpkgs ? import ./nix {}
-, lunarispkgs ? import ./packages.nix {} }:
+, toyboxpkgs ? import ./packages.nix {} }:
 
 nixpkgs.mkShell rec {
-  name = "lunarispkgs";
+  name = "toyboxpkgs";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-    # <lunarispkgs>
-    lunarispkgs.bazel
-    lunarispkgs.cargo
-    lunarispkgs.clippy
-    lunarispkgs.go
-    lunarispkgs.golangci-lint
-    lunarispkgs.google-cloud-sdk
-    lunarispkgs.helm
-    lunarispkgs.jq
-    lunarispkgs.k9s
-    lunarispkgs.mirror
-    lunarispkgs.nodejs
-    lunarispkgs.openjdk
-    lunarispkgs.python
-    lunarispkgs.rustc
-    lunarispkgs.skaffold
+    # <toyboxpkgs>
+    toyboxpkgs.bazel
+    toyboxpkgs.cargo
+    toyboxpkgs.clippy
+    toyboxpkgs.go
+    toyboxpkgs.golangci-lint
+    toyboxpkgs.google-cloud-sdk
+    toyboxpkgs.helm
+    toyboxpkgs.jq
+    toyboxpkgs.k9s
+    toyboxpkgs.mirror
+    toyboxpkgs.nodejs
+    toyboxpkgs.openjdk
+    toyboxpkgs.python
+    toyboxpkgs.rustc
+    toyboxpkgs.skaffold
   ];
 }

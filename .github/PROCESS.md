@@ -10,11 +10,11 @@ This document is to describe the internal process that the Lunaris team uses for
 
 ## Project Boards
 
-The project boards are located under the `Projects` tab in GitHub: https://github.com/lunaris-studios/lunaris-pkgs/projects/
+The project boards are located under the `Projects` tab in GitHub: https://github.com/toyboxco/toyboxpkgs/projects/
 
 ### Core Project Board
 
-The `Core` project board contains issues related to the all of the `lunaris-pkgs` nix derivation files. A description of each column is below.
+The `Core` project board contains issues related to the all of the `toyboxpkgs` nix derivation files. A description of each column is below.
 
 #### Backlog :robot:
 
@@ -48,7 +48,7 @@ Once another label is applied to the issue, the `triage` label is automatically 
 
 ### Support Questions
 
-If the issue is a support question, the submitter should be redirected to our [forum](https://forum.lunaris.io) or [discord](https://discord.gg/3VY7XND). The issue should be closed and locked. Use the `lunitron: support` label to accomplish this.
+If the issue is a support question, the submitter should be redirected to our [forum](https://forum.toybox.ooo) or [discord](https://discord.gg/3VY7XND). The issue should be closed and locked. Use the `lunitron: support` label to accomplish this.
 
 ### Incomplete Template
 
@@ -86,13 +86,13 @@ The overall flow:
 4. When the release branch is done it is merged into `master` and `next`
 5. If an issue in `master` is detected a hotfix branch is created from `master`
 6. Once the hotfix is complete it is merged to both `master` and `next`
-7. All branches should follow the syntax of `{type}-{details}` where `{type}` is the type of branch (`hotfix`, `release`, or one of the [commit types](https://github.com/lunaris-studios/lunaris-pkgs/blob/master/.github/CONTRIBUTING.md#commit-message-format)) and `{details}` is a few hyphen separated words explaining the branch
+7. All branches should follow the syntax of `{type}-{details}` where `{type}` is the type of branch (`hotfix`, `release`, or one of the [commit types](https://github.com/toyboxco/toyboxpkgs/blob/master/.github/CONTRIBUTING.md#commit-message-format)) and `{details}` is a few hyphen separated words explaining the branch
 
 ### Master, Next & Alpha Branches
 
 #### Master Branch
 
-The [master](https://github.com/lunaris-studios/lunaris-pkgs/tree/master) branch is our source of all production ready, stable deployments.
+The [master](https://github.com/toyboxco/toyboxpkgs/tree/master) branch is our source of all production ready, stable deployments.
 
 The following branch should be merged back to **both** `next` and `master`:
 
@@ -102,7 +102,7 @@ A `hotfix` branch should be the **only** branch that is created from `master`.
 
 #### Next Branch
 
-The [next](https://github.com/lunaris-studios/lunaris-pkgs/tree/next) is our semi-stable branch that we use for release assembly.
+The [next](https://github.com/toyboxco/toyboxpkgs/tree/next) is our semi-stable branch that we use for release assembly.
 
 The following branch should be merged **only** interact with the 
 
@@ -110,13 +110,13 @@ A `feature` branch should be the **only** branch that is created from `next`.
 
 #### Alpha Branch
 
-The [alpha](https://github.com/lunaris-studios/lunaris-pkgs/tree/alpha) branch is an intermidary branch leading up to our [next](https://github.com/lunaris-studios/lunaris-pkgs/tree/next) branch. It's equipped with production-grade CI / CD pipelines - identical to our [next](https://github.com/lunaris-studios/lunaris-pkgs/tree/next) branch for quick testing / iteration.
+The [alpha](https://github.com/toyboxco/toyboxpkgs/tree/alpha) branch is an intermidary branch leading up to our [next](https://github.com/toyboxco/toyboxpkgs/tree/next) branch. It's equipped with production-grade CI / CD pipelines - identical to our [next](https://github.com/toyboxco/toyboxpkgs/tree/next) branch for quick testing / iteration.
 
 The following branches should be merged to `alpha` via a pull request:
 
 1. A feature branch (e.g. `feat-desktop-support`): an addition to the API that is not a bug fix or regression fix
 1. A bug fix branch (e.g. `fix-tab-color`): a bug fix that is not fixing a regression or issue with a published release
-1. All other types listed in the [commit message types](https://github.com/lunaris-studios/lunaris-pkgs/blob/master/.github/CONTRIBUTING.md#commit-message-format): `docs`, `style`, `refactor`, `perf`, `test`, `chore`
+1. All other types listed in the [commit message types](https://github.com/toyboxco/toyboxpkgs/blob/master/.github/CONTRIBUTING.md#commit-message-format): `docs`, `style`, `refactor`, `perf`, `test`, `chore`
 
 The following branch should be merged back to `next` after thurough testing.
 

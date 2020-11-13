@@ -1,12 +1,12 @@
-<h1 align="center" style="border-bottom: none;">🌙📦 lunarispkgs</h1>
-<h3 align="center">A Nix package channel for Lunaris Studios development</h3>
+<h1 align="center" style="border-bottom: none;">🌙📦 toyboxpkgs</h1>
+<h3 align="center">A Nix package channel for Toybox Labs development</h3>
 <p align="center">
   <a href="#badge">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
   </a>
 </p>
 
-**lunarispkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Lunaris Studios, we've implemented our own custom package channel quick and iterative development via **Nix**.
+**toyboxpkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Toybox Labs, we've implemented our own custom package channel quick and iterative development via **Nix**.
 
 ## Packages
 
@@ -27,10 +27,10 @@
 
 ## Get Started
 
-> Our home management system, [Casa](https://github.com/lunaris-studios/casa), is shipped with the highest level revisions for all `lunarispkgs` packages.
+> Our home management system, [Casa](https://github.com/toyboxco/casa), is shipped with the highest level revisions for all `toyboxpkgs` packages.
 
 1. [Install Nix](#installing-nix)
-2. Install **_lunarispkgs_** for your environment
+2. Install **_toyboxpkgs_** for your environment
    - [Nix Channels](#nix-channels)
    - [Niv](#niv)
 
@@ -44,16 +44,16 @@ $ curl -L https://nixos.org/nix/install | sh
 
 ## Nix Channels
 
-Subscribe to the **lunarispkgs** custom channel
+Subscribe to the **toyboxpkgs** custom channel
 
 ```bash
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable lunarispkgs
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable toyboxpkgs
 ```
 
 Import the channel in your derivations
 
 ```nix
-lunarispkgs = import <lunarispkgs> {};
+toyboxpkgs = import <toyboxpkgs> {};
 ```
 
 ## Niv
@@ -75,22 +75,22 @@ home.packages = with pkgs; [
 ];
 ```
 
-In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `lunarispkgs` by running the following:
+In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `toyboxpkgs` by running the following:
 
 ```bash
-niv add lunaris-studios/lunarispkgs
+niv add toyboxco/toyboxpkgs
 ```
 
 This will pull directly fromt the `master` branch. You can target a specific branch by applying the `-b <BRANCH>` flag:
 
 ```bash
-niv add lunaris-studios/lunarispkgs -b alpha
+niv add toyboxco/toyboxpkgs -b alpha
 ```
 
 You can add a specific version of the collection via:
 
 ```bash
-niv add lunarispkgs \
+niv add toyboxpkgs \
   -v 1.1.0-alpha.1 \
-  -t "https://github.com/lunaris-studios/lunarispkgs/archive/v<version>.tar.gz"
+  -t "https://github.com/toyboxco/toyboxpkgs/archive/v<version>.tar.gz"
 ```

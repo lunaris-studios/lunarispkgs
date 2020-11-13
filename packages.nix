@@ -1,7 +1,7 @@
 { nixpkgs ? import ./nix {} }:
 with nixpkgs;
 let
-  package = p: v: { ... } @args: callPackage (./. + "/src/pkgs/${p}/versions/${v}.nix") ( args // {});
+  package = p: v: { ... } @args: callPackage (./. + "/pkgs/${p}/versions/${v}.nix") ( args // {});
 in
 rec {
   bazel = bazel_3_2_0;
