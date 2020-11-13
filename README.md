@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: none;">🌙📦 toyboxpkgs</h1>
+<h1 align="center" style="border-bottom: none;">📦 toyboxpkgs</h1>
 <h3 align="center">A Nix package channel for Toybox Labs development</h3>
 <p align="center">
   <a href="#badge">
@@ -47,7 +47,7 @@ $ curl -L https://nixos.org/nix/install | sh
 Subscribe to the **toyboxpkgs** custom channel
 
 ```bash
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable toyboxpkgs
+nix-channel --add https://github.com/toyboxco/toyboxpkgs/archive/master.tar.gz toyboxpkgs
 ```
 
 Import the channel in your derivations
