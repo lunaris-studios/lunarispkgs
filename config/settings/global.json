@@ -1,0 +1,10 @@
+{
+	"project": {
+    "owner": "Toybox Labs, LLC.",
+		"name": "toyboxpgs",
+    "organization": "toyboxco",
+    "repository": "https://github.com/toyboxco/toyboxpkgs",
+    "version": "1.0.0",
+    "nixpkgs_channel": "nixos-20.09"
+	}
+}
