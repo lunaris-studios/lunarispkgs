@@ -25,8 +25,8 @@ Instead of a single `master` branch, this workflow uses two branches to record t
 The first step is to complement the default `master` with a `next` branch. A simple way to do this is for one developer to create an empty `next` branch locally and push it to the server:
 
 ```shell
-git branch develop
-git push -u origin develop
+git branch next
+git push -u origin next
 ```
 
 This branch will contain the complete history of the project, whereas `master` will contain an abridged version. Other `next`ers should now clone the central repository and create a tracking branch for `next`.
@@ -69,7 +69,7 @@ Feature branches are generally created off to the latest `next` branch.
 Without the git-flow extensions:
 
 ```shell
-git checkout develop
+git checkout next
 git checkout -b feature_branch
 ```
 When using the git-flow extension:
@@ -87,7 +87,7 @@ When you’re done with the development work on the feature, the next step is to
 Without the git-flow extensions:
 
 ```shell
-git checkout develop
+git checkout next
 git merge feature_branch
 ```
 
@@ -110,7 +110,7 @@ Making release branches is another straightforward branching operation. Like fea
 Without the git-flow extensions:
 
 ```shell
-git checkout develop
+git checkout next
 git checkout -b release/0.1.0
 ```
 
@@ -166,7 +166,7 @@ Similar to finishing a release branch, a hotfix branch gets merged into both `ma
 ```shell
 git checkout master
 git merge hotfix_branch
-git checkout develop
+git checkout next
 git merge hotfix_branch
 git branch -d hotfix_branch
 ```
@@ -183,14 +183,14 @@ Without the git-flow extensions:
 
 ```shell
 git checkout master
-git checkout -b develop
+git checkout -b next
 git checkout -b feature_branch
 # work happens on feature branch
-git checkout develop
+git checkout next
 git merge feature_branch
 git branch -d feature_branch
 # release cycle has ended, and we are ready to start a release
-git checkout develop
+git checkout next
 git checkout -b release/0.1.0
 # release is ready to ship
 git checkout master
@@ -219,7 +219,7 @@ Without the git-flow extensions:
 git checkout master
 git checkout -b hotfix_branch
 # work is done commits are added to the hotfix_branch
-git checkout develop
+git checkout next
 git merge hotfix_branch
 git checkout master
 git merge hotfix_branch
