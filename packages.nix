@@ -1,5 +1,5 @@
 { nixpkgs ? import ./nix {}
-, libs ? import ./libs {} }:
+, util ? import ./util {} }:
 with nixpkgs;
 let
   package = package: version: { ... } @args: callPackage (./. + "/pkgs/${package}/versions/${version}.nix") ( args // {} );
@@ -74,7 +74,7 @@ rec {
 
   waypoint = waypoint_0_1_5;
   waypoint_0_1_5 = package "waypoint" "0.1.5" {
-    buildHashiCorpPackage = libs.buildHashiCorpPackage;
+    buildHashiCorpPackage = util.buildHashiCorpPackage;
   };
 }
    
