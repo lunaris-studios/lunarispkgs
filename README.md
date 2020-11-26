@@ -24,6 +24,7 @@
 | `python`           | <ul><li>3.7.7 (python_3_7_7)</li></ul>                                                                                                        |
 | `rustc`            | <ul><li>1.43.0 (rustc_1_45_2)</li></ul>                                                                                                       |
 | `skaffold`         | <ul><li>1.15.0 (skaffold_1_15_0)</li><li>1.11.0 (skaffold_1_11_0)</li><li>1.10.1 (skaffold_1_10_1)</li><li>1.10.0 (skaffold_1_10_0)</li></ul> |
+| `waypoint`         | <ul><li>1.15.0 (waypoint_0_1_5)</li></ul> |
 
 ## Get Started
 
