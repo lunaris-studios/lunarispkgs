@@ -74,6 +74,13 @@ rec {
   nodejs_12_18_3 = package "nodejs" "12.18.3" {};
   nodejs_10_19_0 = package "nodejs" "10.19.0" {};
 
+  # === nomad ===
+
+  nomad = nomad_0_10_9;
+  nomad_0_10_9 = package "nomad" "0.10.9" {
+    buildHashiCorpPackage = util.buildHashiCorpPackage;
+  };  
+
   # === python ===
 
   python = python_3_7_7;
