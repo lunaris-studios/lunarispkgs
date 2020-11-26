@@ -8,5 +8,5 @@ buildHashiCorpPackage rec {
     version
     sha256
   ;
-  name = "waypoint";
+  name = "nomad";
 }
