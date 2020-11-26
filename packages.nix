@@ -1,7 +1,8 @@
-{ nixpkgs ? import ./nix {} }:
+{ nixpkgs ? import ./nix {}
+, libs ? import ./libs {} }:
 with nixpkgs;
 let
-  package = p: v: { ... } @args: callPackage (./. + "/pkgs/${p}/versions/${v}.nix") ( args // {});
+  package = package: version: { ... } @args: callPackage (./. + "/pkgs/${package}/versions/${version}.nix") ( args // {} );
 in
 rec {
   bazel = bazel_3_2_0;
@@ -51,23 +52,29 @@ rec {
   python = python_3_7_7;
   python_3_7_7 = nixpkgs.pkgs.python37;
 
-  rust = rust_1_43_0;
-  rust_packages = rust.packages.stable;
-  rust_1_43_0 = nixpkgs.pkgs.rust_1_43;
-  rust_1_43_0_packages = rust_1_43_0.packages.stable;
-
   cargo = cargo_1_43_0;
-  cargo_1_43_0 = rust_1_43_0_packages.cargo;
+  cargo_1_43_0 = rust_1_45_2_packages.cargo;
 
   clippy = clippy_1_43_0;
-  clippy_1_43_0 = rust_1_43_0_packages.clippy;
+  clippy_1_43_0 = rust_1_45_2_packages.clippy;
+
+  rust = rust_1_45_2;
+  rust_packages = rust.packages.stable;
+  rust_1_45_2 = nixpkgs.pkgs.rust_1_45;
+  rust_1_45_2_packages = rust_1_45.packages.stable;
 
   rustc = rustc_1_43_0;
-  rustc_1_43_0 = rust_1_43_0_packages.rustc;
+  rustc_1_43_0 = rust_1_45_2_packages.rustc;
 
   skaffold = skaffold_1_15_0;
   skaffold_1_15_0 = package "skaffold" "1.15.0" {};
   skaffold_1_11_0 = package "skaffold" "1.11.0" {};
   skaffold_1_10_1 = package "skaffold" "1.10.1" {};
   skaffold_1_10_0 = package "skaffold" "1.10.0" {};
+
+  waypoint = waypoint_0_1_5;
+  waypoint_0_1_5 = package "waypoint" "0.1.5" {
+    buildHashiCorpPackage = libs.buildHashiCorpPackage;
+  };
 }
+   

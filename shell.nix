@@ -21,5 +21,6 @@ nixpkgs.mkShell rec {
     toyboxpkgs.python
     toyboxpkgs.rustc
     toyboxpkgs.skaffold
+    toyboxpkgs.waypoint
   ];
 }
