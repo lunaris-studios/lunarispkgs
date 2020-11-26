@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/toyboxco/toyboxpkgs/compare/v1.0.0...v1.1.0) (2020-11-26)
+
+
+### Features
+
+* add buildHashiCorpPackage utility ([ba2b759](https://github.com/toyboxco/toyboxpkgs/commit/ba2b759e83a643018831f2427334aaf9238ad3c6))
+* add waypoint (0.1.5) ([b5c6330](https://github.com/toyboxco/toyboxpkgs/commit/b5c63308c5cc7b27f5607bde315f17a3e6cf1d4d))
+
 # 1.0.0 (2020-11-25)
 
 
