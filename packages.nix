@@ -63,8 +63,8 @@ rec {
   rust_1_45_2 = nixpkgs.pkgs.rust_1_45;
   rust_1_45_2_packages = rust_1_45.packages.stable;
 
-  rustc = rustc_1_43_0;
-  rustc_1_43_0 = rust_1_45_2_packages.rustc;
+  rustc = rustc_1_45_2;
+  rustc_1_45_2 = rust_1_45_2_packages.rustc;
 
   skaffold = skaffold_1_15_0;
   skaffold_1_15_0 = package "skaffold" "1.15.0" {};
