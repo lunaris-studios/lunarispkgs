@@ -13,6 +13,13 @@ rec {
     bazelSelf = bazel_3_2_0;
   };
 
+  # === consul ===
+
+  consul = consul_1_9_0;
+  consul_1_9_0 = package "consul" "1.9.0" {
+    buildHashiCorpPackage = util.buildHashiCorpPackage;
+  };
+
   # === go ===
 
   go = go_1_14_4;
