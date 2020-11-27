@@ -38,118 +38,118 @@ jobs:
 
       - name: Test `bazel`
         id: test-bazel
-        run: /
+        run: |
           nix-shell --pure --run "bazel version"
 
       # === consul ===          
 
       - name: Test `consul`
         id: test-consul
-        run: /
+        run: |
           nix-shell --pure --run "consul version"
 
       # === golangci-lint ===          
 
       - name: Test `golangci-lint`
         id: test-golangci-lint
-        run: /
+        run: |
           nix-shell --pure --run "golangci-lint version"
 
       # === google-cloud-sdk ===          
 
       - name: Test `gcloud`
         id: test-gcloud
-        run: /
+        run: |
           nix-shell --pure --run "gcloud version"
 
       # === helm ===          
 
       - name: Test `helm`
         id: test-helm
-        run: /
+        run: |
           nix-shell --pure --run "helm version"
 
       # === jq ===          
 
       - name: Test `jq`
         id: test-jq
-        run: /
+        run: |
           nix-shell --pure --run "jq --version"
 
       # === k9s ===          
 
       - name: Test `k9s`
         id: test-k9s
-        run: /
+        run: |
           nix-shell --pure --run "k9s version"
 
       # === mirror ===          
 
       - name: Test `mirror`
         id: test-mirror
-        run: /
+        run: |
           nix-shell --pure --run "mirror version"
 
       # === nodejs ===          
 
       - name: Test `node`
         id: test-node
-        run: /
+        run: |
           nix-shell --pure --run "node --version"
 
       - name: Test `npm`
         id: test-npm
-        run: /
+        run: |
           nix-shell --pure --run "npm --version"
 
       # === nomad ===
 
       - name: Test `nomad`
         id: test-nomad
-        run: /
+        run: |
           nix-shell --pure --run "nomad version"
 
       # === openjdk ===
 
       - name: Test `jshell`
         id: test-jshell
-        run: /
+        run: |
           nix-shell --pure --run "nomad version"
 
       # === python ===
 
       - name: Test `python`
         id: test-python
-        run: /
+        run: |
           nix-shell --pure --run "python --version"     
           
       # === rust ===
 
       - name: Test `cargo`
         id: test-cargo
-        run: /
+        run: |
           nix-shell --pure --run "cargo version"         
 
       - name: Test `clippy`
         id: test-clippy
-        run: /
+        run: |
           nix-shell --pure --run "cargo clippy --version"          
 
       - name: Test `rustc`
         id: test-rustc
-        run: /
+        run: |
           nix-shell --pure --run "rustc --version"    
           
       # === skaffold ===
 
       - name: Test `skaffold`
         id: test-skaffold
-        run: /
+        run: |
           nix-shell --pure --run "skaffold version"      
           
       # === waypoint ===
 
       - name: Test `waypoint`
         id: test-waypoint
-        run: /
+        run: |
           nix-shell --pure --run "waypoint version"                     
