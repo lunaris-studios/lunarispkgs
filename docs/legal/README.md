@@ -1,6 +1,6 @@
-# `mirror` Legal Docs
+# `toyboxpkgs` Legal Docs
 
-Welcome to the [mirror](https://github.com/toyboxco/mirror), `legal` documentation.
+Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs), `legal` documentation.
 
 | Topic                                                                                   | Description                                |
 | :-------------------------------------------------------------------------------------- | :----------------------------------------- |

@@ -1,6 +1,6 @@
-# `mirror` release and maintenance policy
+# `toyboxpkgs` release and maintenance policy
 
-`mirror` has strict policies governing version naming, as well as release pace for major, minor,
+`toyboxpkgs` has strict policies governing version naming, as well as release pace for major, minor,
 patch, and security releases.
 
 Our current policy is:
@@ -10,10 +10,10 @@ Our current policy is:
 
 ## Versioning
 
-`mirror` uses [Semantic Versioning](https://semver.org/) for its releases:
+`toyboxpkgs` uses [Semantic Versioning](https://semver.org/) for its releases:
 `(Major).(Minor).(Patch)`.
 
-For example, for `mirror` version 12.10.6:
+For example, for `toyboxpkgs` version 12.10.6:
 
 - `12` represents the major version. The major release was 12.0.0 but often referred to as 12.0.
 - `10` represents the minor version. The minor release was 12.10.0 but often referred to as 12.10.
@@ -25,14 +25,14 @@ The following table describes the version types and their release cadence:
 
 | Version type | Description | Cadence |
 |:-------------|:------------|:--------|
-| Major        | For significant changes, or when any backward-incompatible changes are introduced to the public API. | Yearly. The next major release is `mirror` 14.0 on May 22, 2021. Subsequent major releases will be scheduled for May 22 each year, by default. |
+| Major        | For significant changes, or when any backward-incompatible changes are introduced to the public API. | Yearly. The next major release is `toyboxpkgs` 14.0 on May 22, 2021. Subsequent major releases will be scheduled for May 22 each year, by default. |
 | Minor        | For when new backward-compatible functionality is introduced to the public API, a minor feature is introduced, or when a set of smaller features is rolled out. | Monthly on the 22nd. |
 | Patch        | For backward-compatible bug fixes that fix incorrect behavior. See [Patch releases](#patch-releases). | As needed. |
 
 ## Upgrade recommendations
 
-We encourage everyone to run the [latest stable release](https://github.com/toyboxco/mirror/releases) (the latest stable release is also reflected in the current state of the [master branch](https://github.com/toyboxco/mirror))
-to ensure that you can easily upgrade to the most secure and feature-rich `mirror` experience.
+We encourage everyone to run the [latest stable release](https://github.com/toyboxco/toyboxpkgs/releases) (the latest stable release is also reflected in the current state of the [master branch](https://github.com/toyboxco/toyboxpkgs))
+to ensure that you can easily upgrade to the most secure and feature-rich `toyboxpkgs` experience.
 To make sure you can easily run the most recent stable release, we are working
 hard to keep the update process simple and reliable.
 

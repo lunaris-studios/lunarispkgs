@@ -1,14 +1,14 @@
-# `mirror` Docs
+# `toyboxpkgs` Docs
 
-Welcome to the [mirror](https://github.com/toyboxco/mirror) documentation.
+Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs) documentation.
 
-## Contributing to `mirror`
+## Contributing to `toyboxpkgs`
 
-`mirror` is an open source project.
+`toyboxpkgs` is an open source project.
 
-Learn how to contribute to `mirror` with the following resources:
+Learn how to contribute to `toyboxpkgs` with the following resources:
 
 | Topic                               | Description                                |
 | :---------------------------------- | :----------------------------------------- |
-| [Development](development/index.md) | How to contribute to `mirror` development. |
+| [Development](development/index.md) | How to contribute to `toyboxpkgs` development. |
 | [Legal](legal/index.md)             | Contributor license agreements.            |
