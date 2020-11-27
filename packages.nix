@@ -39,8 +39,8 @@ rec {
 
   # === helm ===
   
-  helm = helm_3_2_1;
-  helm_3_2_1 = package "helm" "3.2.1" {};
+  helm = helm_3_4_1;
+  helm_3_4_1 = package "helm" "3.4.1" {};
   
   # === jq ===
 

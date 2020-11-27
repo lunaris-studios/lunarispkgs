@@ -18,7 +18,9 @@ buildGoModule rec {
     repo = "helm";
     rev = "v${version}";
   };
-  vendorSha256 = "0j25m56cwzjd9b75v7xlb26q81bsmln77k23h9n8v2f2gqwwpkrl";
+  vendorSha256 = "0x3dcvnrl7cs8faaiq9ybfgg0lkac5ppf61i724cja270nmpmazl";
+
+  doCheck = false;
 
   subPackages = [ "cmd/helm" ];
   buildFlagsArray = [ "-ldflags=-w -s -X helm.sh/helm/v3/internal/version.version=v${version}" ];
