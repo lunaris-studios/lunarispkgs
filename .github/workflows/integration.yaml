@@ -24,15 +24,15 @@ jobs:
 
       - name: Cachix
         id: test-3
-        uses: cachix/cachix-action@v7
+        uses: cachix/cachix-action@v8
         with:
-          name: toyboxpkgs
+          name: toy-toyboxpkgs
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Download Nix Dependenices
         id: test-4
         run: |
-          nix-shell --pure shell.ci.nix
+          nix-shell --pure
 
       # === bazel ===          
 
