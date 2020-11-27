@@ -8,5 +8,5 @@ let
 in
   build {
     version = "0.10.9";
-    sha256 = "0khlkbh4j45kxxmf9dbil3y5l2v81xljli27wgr52v8d9c1krf55";
+    sha256 = "10n8scr7x7mdi09pigv8r1vzzpf4y8i1yj5j1xslgbapdwcy8dzb";
   }
