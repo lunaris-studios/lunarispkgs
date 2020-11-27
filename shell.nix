@@ -16,7 +16,7 @@ nixpkgs.mkShell rec {
     toyboxpkgs.helm
     toyboxpkgs.jq
     toyboxpkgs.k9s
-    toyboxpkgs.mirror
+    # toyboxpkgs.mirror
     toyboxpkgs.nodejs
     toyboxpkgs.nomad
     toyboxpkgs.openjdk
