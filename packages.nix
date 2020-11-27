@@ -52,17 +52,6 @@ rec {
   k9s = k9s_0_19_4;
   k9s_0_19_4 = package "k9s" "0.19.4" {};
 
-  # === openjdk ===
-
-  openjdk = openjdk_14;
-  openjdk_headless = openjdk_14_headless;
-  openjdk_14 = nixpkgs.pkgs.openjdk14;
-  openjdk_14_headless = nixpkgs.pkgs.openjdk14_headless;  
-  openjdk_11 = nixpkgs.pkgs.openjdk11;
-  openjdk_11_headless = nixpkgs.pkgs.openjdk11_headless;
-  openjdk_8 = nixpkgs.pkgs.openjdk8;
-  openjdk_8_headless = nixpkgs.pkgs.openjdk8_headless;
-
   # === mirror ===
   
   mirror = mirror_1_0_2;
@@ -79,7 +68,18 @@ rec {
   nomad = nomad_0_10_9;
   nomad_0_10_9 = package "nomad" "0.10.9" {
     buildHashiCorpPackage = util.buildHashiCorpPackage;
-  };  
+  };
+
+  # === openjdk ===
+
+  openjdk = openjdk_14;
+  openjdk_headless = openjdk_14_headless;
+  openjdk_14 = nixpkgs.pkgs.openjdk14;
+  openjdk_14_headless = nixpkgs.pkgs.openjdk14_headless;  
+  openjdk_11 = nixpkgs.pkgs.openjdk11;
+  openjdk_11_headless = nixpkgs.pkgs.openjdk11_headless;
+  openjdk_8 = nixpkgs.pkgs.openjdk8;
+  openjdk_8_headless = nixpkgs.pkgs.openjdk8_headless; 
 
   # === python ===
 
