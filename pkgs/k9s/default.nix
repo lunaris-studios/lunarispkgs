@@ -24,6 +24,8 @@ buildGoModule rec {
     rev    = "v${version}";
   };
 
+  doCheck = false;
+
   buildFlagsArray = ''
     -ldflags=
       -s -w
