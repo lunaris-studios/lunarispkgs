@@ -17,3 +17,6 @@ target
 
 # IDE artifacts
 .idea
+
+# Local
+shell.test.nix

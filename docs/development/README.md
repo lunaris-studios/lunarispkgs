@@ -1,6 +1,6 @@
-# `mirror` Development Docs
+# `toyboxpkgs` Development Docs
 
-Welcome to the [mirror](https://github.com/toyboxco/mirror), `development` documentation.
+Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs), `development` documentation.
 
 | Topic                         | Description                                                                                                |
 | :---------------------------- | :--------------------------------------------------------------------------------------------------------- |

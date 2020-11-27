@@ -8,6 +8,7 @@ nixpkgs.mkShell rec {
     # <toyboxpkgs>
     toyboxpkgs.bazel
     toyboxpkgs.cargo
+    toyboxpkgs.consul
     toyboxpkgs.clippy
     toyboxpkgs.go
     toyboxpkgs.golangci-lint
@@ -15,11 +16,13 @@ nixpkgs.mkShell rec {
     toyboxpkgs.helm
     toyboxpkgs.jq
     toyboxpkgs.k9s
-    toyboxpkgs.mirror
+    # toyboxpkgs.mirror
     toyboxpkgs.nodejs
+    toyboxpkgs.nomad
     toyboxpkgs.openjdk
     toyboxpkgs.python
     toyboxpkgs.rustc
     toyboxpkgs.skaffold
+    toyboxpkgs.waypoint
   ];
 }

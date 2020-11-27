@@ -1,6 +1,5 @@
 name: Release
 on:
-  pull_request:
   push:
     branches:
       - master
@@ -25,10 +24,9 @@ jobs:
 
       - name: Cachix
         id: setup-3
-        uses: cachix/cachix-action@v7
+        uses: cachix/cachix-action@v8
         with:
-          name: mirror
-          signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
+          name: toy-toyboxpkgs-rel
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Download Nix Dependenices
@@ -52,20 +50,20 @@ jobs:
 
       - name: Cachix
         id: release-3
-        uses: cachix/cachix-action@v7
+        uses: cachix/cachix-action@v8
         with:
-          name: mirror
-          signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
+          name: toy-toyboxpkgs-rel
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Install Node.js dependencies
         id: release-4
         run: |
-          npm ci
+          nix-shell --pure --run "npm ci" shell.ci.nix
 
       - name: Release
         id: release-5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm run release        
+        run: |
+          nix-shell --pure --run "npm run release" shell.ci.nix
