@@ -99,4 +99,3 @@ niv add toyboxpkgs \
   -v 1.1.0-alpha.1 \
   -t "https://github.com/toyboxco/toyboxpkgs/archive/v<version>.tar.gz"
 ```
-S
