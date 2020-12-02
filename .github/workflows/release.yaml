@@ -32,7 +32,7 @@ jobs:
       - name: Download Nix Dependenices
         id: setup-4
         run: |
-          nix-shell --pure shell.ci.nix
+          nix-shell --pure shell.release.nix
 
   release:
     name: Release
@@ -58,7 +58,7 @@ jobs:
       - name: Install Node.js dependencies
         id: release-4
         run: |
-          nix-shell --run "npm ci" shell.ci.nix
+          nix-shell --run "npm ci" shell.release.nix
 
       - name: Release
         id: release-5
@@ -66,4 +66,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          nix-shell --run "npm run release" shell.ci.nix
+          nix-shell --run "npm run release" shell.release.nix
