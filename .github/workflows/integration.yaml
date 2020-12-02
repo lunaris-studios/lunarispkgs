@@ -85,10 +85,10 @@ jobs:
 
       # === mirror ===          
 
-      # - name: Test `mirror`
-      #   id: test-mirror
-      #   run: |
-      #     nix-shell --pure --run "mirror version"
+      - name: Test `mirror`
+        id: test-mirror
+        run: |
+          nix-shell --pure --run "mirror version"
 
       # === nodejs ===          
 

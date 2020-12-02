@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/toyboxco/toyboxpkgs/compare/v1.2.0...v1.3.0) (2020-12-02)
+
+
+### Features
+
+* add mirror (1.0.0) ([2092c96](https://github.com/toyboxco/toyboxpkgs/commit/2092c96d2f8c66e374438c094a3e710ec78bcac3))
+
 # [1.2.0](https://github.com/toyboxco/toyboxpkgs/compare/v1.1.0...v1.2.0) (2020-12-02)
 
 

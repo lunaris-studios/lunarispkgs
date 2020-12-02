@@ -54,8 +54,8 @@ rec {
 
   # === mirror ===
   
-  mirror = mirror_1_0_2;
-  mirror_1_0_2 = package "mirror" "1.0.2" {};
+  mirror = mirror_1_0_0;
+  mirror_1_0_0 = package "mirror" "1.0.0" {};
 
   # === nodejs ===
   
