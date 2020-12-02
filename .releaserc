@@ -25,6 +25,7 @@
         "CHANGELOG.md",
         "config/settings/global.json"
       ],
-    }]
+    }],
+    "@semantic-release/github"
   ]
 }
