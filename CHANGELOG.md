@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/toyboxco/toyboxpkgs/compare/v1.2.0...v1.3.0) (2020-12-02)
+
+
+### Features
+
+* stub feature to fix release cycle ([63e47a4](https://github.com/toyboxco/toyboxpkgs/commit/63e47a4c7d34d4d51cacb324acf82d320be5a1c7))
+
 # [1.2.0](https://github.com/toyboxco/toyboxpkgs/compare/v1.1.0...v1.2.0) (2020-12-02)
 
 
