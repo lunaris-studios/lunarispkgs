@@ -22,7 +22,7 @@
 | `helm`             | <ul><li>3.4.1 (helm_3_4_1)</li></ul>                                                                                                          |
 | `jq`               | <ul><li>1.6 (jq_1_6)</li></ul>                                                                                                                |
 | `k9s`              | <ul><li>0.23.10 (k9s_0_23_10)</li></ul>                                                                                                       |
-| `mirror`           | <ul><li>1.0.2 (mirror_1_0_2)</li></ul>                                                                                                        |
+| `mirror`           | <ul><li>1.0.0 (mirror_1_0_0)</li></ul>                                                                                                        |
 | `nodejs`           | <ul><li>12.18.3 (nodejs_12_18_3)</li><li>10.19.0 (nodejs_10_19_0)</li></ul>                                                                   |
 | `nomad`            | <ul><li>0.10.9 (nomad_0_10_9)</li></ul>                                                                                                       |
 | `openjdk`          | <ul><li>14.0.1 (openjdk_14)</li><li>11.0.6 (openjdk_11)</li><li>1.8.0_242 (openjdk_8)</li></ul>                                               |

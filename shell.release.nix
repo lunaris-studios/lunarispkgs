@@ -2,7 +2,7 @@
 , toyboxpkgs ? import ./packages.nix {} }:
 
 nixpkgs.mkShell rec {
-  name = "ci.toyboxpkgs";
+  name = "release.toyboxpkgs";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
     # <toyboxpkgs>
