@@ -26,7 +26,7 @@ jobs:
         id: test-3
         uses: cachix/cachix-action@v8
         with:
-          name: toy-toyboxpkgs
+          name: tal-talismanpkgs-int
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Download Nix Dependenices
@@ -85,10 +85,10 @@ jobs:
 
       # === mirror ===          
 
-      # - name: Test `mirror`
-      #   id: test-mirror
-      #   run: |
-      #     nix-shell --pure --run "mirror version"
+      - name: Test `mirror`
+        id: test-mirror
+        run: |
+          nix-shell --pure --run "mirror version"
 
       # === nodejs ===          
 

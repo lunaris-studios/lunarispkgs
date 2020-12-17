@@ -1,14 +1,14 @@
-# `toyboxpkgs` Docs
+# `talismanpkgs` Docs
 
-Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs) documentation.
+Welcome to the [talismanpkgs](https://github.com/talismanco/talismanpkgs) documentation.
 
-## Contributing to `toyboxpkgs`
+## Contributing to `talismanpkgs`
 
-`toyboxpkgs` is an open source project.
+`talismanpkgs` is an open source project.
 
-Learn how to contribute to `toyboxpkgs` with the following resources:
+Learn how to contribute to `talismanpkgs` with the following resources:
 
 | Topic                               | Description                                |
 | :---------------------------------- | :----------------------------------------- |
-| [Development](development/index.md) | How to contribute to `toyboxpkgs` development. |
+| [Development](development/index.md) | How to contribute to `talismanpkgs` development. |
 | [Legal](legal/index.md)             | Contributor license agreements.            |
