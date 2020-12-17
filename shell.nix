@@ -16,7 +16,7 @@ nixpkgs.mkShell rec {
     talismanpkgs.helm
     talismanpkgs.jq
     talismanpkgs.k9s
-    # talismanpkgs.mirror
+    talismanpkgs.mirror
     talismanpkgs.nodejs
     talismanpkgs.nomad
     talismanpkgs.openjdk
