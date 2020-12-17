@@ -5,7 +5,7 @@ on:
       - master
       - next
       - alpha
-      
+
 jobs:
   setup:
     name: Setup
@@ -67,3 +67,21 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           nix-shell --run "npm run release" shell.release.nix
+
+  merge:
+    name: Merge
+    needs: release
+    runs-on: ubuntu-18.04
+    if: "!contains(github.event.commits[0].message, '[skip ci]') && (github.base_ref == 'master' || github.base_ref == 'alpha')"
+    steps:
+      - name: Checkout
+        id: merge-1
+        uses: actions/checkout@v1
+
+      - name: Merge ${{ github.base_ref }} -> next
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: ${{ github.base_ref }}
+          target_branch: next
+          github_token: ${{ github.token }}
