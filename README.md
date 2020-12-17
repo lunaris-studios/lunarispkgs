@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: none;">📦 toyboxpkgs</h1>
+<h1 align="center" style="border-bottom: none;">📦 talismanpkgs</h1>
 <h3 align="center">A Nix package channel for Toybox Labs development</h3>
 <p align="center">
   <a href="#badge">
@@ -6,7 +6,7 @@
   </a>
 </p>
 
-**toyboxpkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Toybox Labs, we've implemented our own custom package channel quick and iterative development via **Nix**.
+**talismanpkgs** is a derivative of the [Nixpkgs](https://github.com/nixos/nixpkgs) collection - a collection of software packages that can be installed with the [Nix](https://nixos.org/nix/) package manager. In order to streamline development and CI pipelines at Toybox Labs, we've implemented our own custom package channel quick and iterative development via **Nix**.
 
 ## Packages
 
@@ -33,7 +33,7 @@
 
 ## Get Started
 
-> Our home management system, [Casa](https://github.com/toyboxco/casa), is shipped with the highest level revisions for all `toyboxpkgs` packages.
+> Our home management system, [Casa](https://github.com/toyboxco/casa), is shipped with the highest level revisions for all `talismanpkgs` packages.
 
 - [Installation](#installation)
   - [Nix Channels](#nix-channels)
@@ -49,16 +49,16 @@ $ curl -L https://nixos.org/nix/install | sh
 
 ## Nix Channels
 
-Subscribe to the **toyboxpkgs** custom channel
+Subscribe to the **talismanpkgs** custom channel
 
 ```bash
-nix-channel --add https://github.com/toyboxco/toyboxpkgs/archive/master.tar.gz toyboxpkgs
+nix-channel --add https://github.com/toyboxco/talismanpkgs/archive/master.tar.gz talismanpkgs
 ```
 
 Import the channel in your derivations
 
 ```nix
-toyboxpkgs = import <toyboxpkgs> {};
+talismanpkgs = import <talismanpkgs> {};
 ```
 
 ## Niv
@@ -80,22 +80,22 @@ home.packages = with pkgs; [
 ];
 ```
 
-In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `toyboxpkgs` by running the following:
+In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `talismanpkgs` by running the following:
 
 ```bash
-niv add toyboxco/toyboxpkgs
+niv add toyboxco/talismanpkgs
 ```
 
 This will pull directly fromt the `master` branch. You can target a specific branch by applying the `-b <BRANCH>` flag:
 
 ```bash
-niv add toyboxco/toyboxpkgs -b alpha
+niv add toyboxco/talismanpkgs -b alpha
 ```
 
 You can add a specific version of the collection via:
 
 ```bash
-niv add toyboxpkgs \
+niv add talismanpkgs \
   -v 1.1.0-alpha.1 \
-  -t "https://github.com/toyboxco/toyboxpkgs/archive/v<version>.tar.gz"
+  -t "https://github.com/toyboxco/talismanpkgs/archive/v<version>.tar.gz"
 ```

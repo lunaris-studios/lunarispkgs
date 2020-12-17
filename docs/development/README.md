@@ -1,6 +1,6 @@
-# `toyboxpkgs` Development Docs
+# `talismanpkgs` Development Docs
 
-Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs), `development` documentation.
+Welcome to the [talismanpkgs](https://github.com/toyboxco/talismanpkgs), `development` documentation.
 
 | Topic                         | Description                                                                                                |
 | :---------------------------- | :--------------------------------------------------------------------------------------------------------- |

@@ -1,28 +1,28 @@
 { nixpkgs ? import ./nix {}
-, toyboxpkgs ? import ./packages.nix {} }:
+, talismanpkgs ? import ./packages.nix {} }:
 
 nixpkgs.mkShell rec {
-  name = "toyboxpkgs";
+  name = "talismanpkgs";
   env = nixpkgs.buildEnv { name = name; paths = buildInputs; };
   buildInputs = [
-    # <toyboxpkgs>
-    toyboxpkgs.bazel
-    toyboxpkgs.cargo
-    toyboxpkgs.consul
-    toyboxpkgs.clippy
-    toyboxpkgs.go
-    toyboxpkgs.golangci-lint
-    toyboxpkgs.google-cloud-sdk
-    toyboxpkgs.helm
-    toyboxpkgs.jq
-    toyboxpkgs.k9s
-    toyboxpkgs.mirror
-    toyboxpkgs.nodejs
-    toyboxpkgs.nomad
-    toyboxpkgs.openjdk
-    toyboxpkgs.python
-    toyboxpkgs.rustc
-    toyboxpkgs.skaffold
-    toyboxpkgs.waypoint
+    # <talismanpkgs>
+    talismanpkgs.bazel
+    talismanpkgs.cargo
+    talismanpkgs.consul
+    talismanpkgs.clippy
+    talismanpkgs.go
+    talismanpkgs.golangci-lint
+    talismanpkgs.google-cloud-sdk
+    talismanpkgs.helm
+    talismanpkgs.jq
+    talismanpkgs.k9s
+    talismanpkgs.mirror
+    talismanpkgs.nodejs
+    talismanpkgs.nomad
+    talismanpkgs.openjdk
+    talismanpkgs.python
+    talismanpkgs.rustc
+    talismanpkgs.skaffold
+    talismanpkgs.waypoint
   ];
 }

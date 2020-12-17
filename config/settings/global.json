@@ -3,7 +3,7 @@
     "owner": "Toybox Labs, LLC.",
 		"name": "toyboxpgs",
     "organization": "toyboxco",
-    "repository": "https://github.com/toyboxco/toyboxpkgs",
+    "repository": "https://github.com/toyboxco/talismanpkgs",
     "version": "1.3.0",
     "nixpkgs_channel": "nixos-20.09"
 	}

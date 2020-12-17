@@ -1,5 +1,5 @@
 {
-  "name": "toyboxpkgs",
+  "name": "talismanpkgs",
   "private": false,
   "scripts": {
     "release": "semantic-release --ci",

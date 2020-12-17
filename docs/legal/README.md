@@ -1,6 +1,6 @@
-# `toyboxpkgs` Legal Docs
+# `talismanpkgs` Legal Docs
 
-Welcome to the [toyboxpkgs](https://github.com/toyboxco/toyboxpkgs), `legal` documentation.
+Welcome to the [talismanpkgs](https://github.com/toyboxco/talismanpkgs), `legal` documentation.
 
 | Topic                                                                                   | Description                                |
 | :-------------------------------------------------------------------------------------- | :----------------------------------------- |
