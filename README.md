@@ -33,7 +33,7 @@
 
 ## Get Started
 
-> Our home management system, [Casa](https://github.com/toyboxco/casa), is shipped with the highest level revisions for all `talismanpkgs` packages.
+> Our home management system, [Casa](https://github.com/talismanco/casa), is shipped with the highest level revisions for all `talismanpkgs` packages.
 
 - [Installation](#installation)
   - [Nix Channels](#nix-channels)
@@ -52,7 +52,7 @@ $ curl -L https://nixos.org/nix/install | sh
 Subscribe to the **talismanpkgs** custom channel
 
 ```bash
-nix-channel --add https://github.com/toyboxco/talismanpkgs/archive/master.tar.gz talismanpkgs
+nix-channel --add https://github.com/talismanco/talismanpkgs/archive/master.tar.gz talismanpkgs
 ```
 
 Import the channel in your derivations
@@ -83,13 +83,13 @@ home.packages = with pkgs; [
 In your project directory, run `niv init` to bootstrap `niv`. Now you can install latest version of `talismanpkgs` by running the following:
 
 ```bash
-niv add toyboxco/talismanpkgs
+niv add talismanco/talismanpkgs
 ```
 
 This will pull directly fromt the `master` branch. You can target a specific branch by applying the `-b <BRANCH>` flag:
 
 ```bash
-niv add toyboxco/talismanpkgs -b alpha
+niv add talismanco/talismanpkgs -b alpha
 ```
 
 You can add a specific version of the collection via:
@@ -97,5 +97,5 @@ You can add a specific version of the collection via:
 ```bash
 niv add talismanpkgs \
   -v 1.1.0-alpha.1 \
-  -t "https://github.com/toyboxco/talismanpkgs/archive/v<version>.tar.gz"
+  -t "https://github.com/talismanco/talismanpkgs/archive/v<version>.tar.gz"
 ```

@@ -1,6 +1,6 @@
 # `talismanpkgs` Docs
 
-Welcome to the [talismanpkgs](https://github.com/toyboxco/talismanpkgs) documentation.
+Welcome to the [talismanpkgs](https://github.com/talismanco/talismanpkgs) documentation.
 
 ## Contributing to `talismanpkgs`
 
