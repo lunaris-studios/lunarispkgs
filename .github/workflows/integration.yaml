@@ -26,7 +26,7 @@ jobs:
         id: test-3
         uses: cachix/cachix-action@v8
         with:
-          name: toy-talismanpkgs
+          name: tal-talismanpkgs-int
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: Download Nix Dependenices
