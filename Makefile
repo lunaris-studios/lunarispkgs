@@ -1,6 +1,6 @@
 # MAKEFILE
 #
-# @author      Sam Craig <sam@toybox.ooo>
+# @author      Sam Craig <sam@talisman.ooo>
 # @link        https://github.com/talismanco/talismanpkgs
 # ------------------------------------------------------------------------------
 
