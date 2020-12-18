@@ -1,9 +1,9 @@
 {
 	"project": {
-    "owner": "Toybox Labs, LLC.",
-		"name": "toyboxpgs",
-    "organization": "toyboxco",
-    "repository": "https://github.com/toyboxco/toyboxpkgs",
+    "owner": "Talisman Consulting, LLC.",
+		"name": "talismanpkgs",
+    "organization": "talismanco",
+    "repository": "https://github.com/talismanco/talismanpkgs",
     "version": "1.2.0",
     "nixpkgs_channel": "nixos-20.09"
 	}

@@ -1,7 +1,7 @@
 # MAKEFILE
 #
-# @author      Sam Craig <sam@toybox.ooo>
-# @link        https://github.com/toyboxco/toyboxpkgs
+# @author      Sam Craig <sam@talisman.ooo>
+# @link        https://github.com/talismanco/talismanpkgs
 # ------------------------------------------------------------------------------
 
 .EXPORT_ALL_VARIABLES:
