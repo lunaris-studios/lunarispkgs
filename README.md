@@ -13,9 +13,9 @@
 | Packages           | Versions                                                                                                                                      |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `bazel`            | <ul><li>3.2.0 (bazel_3_2_0)</li></ul>                                                                                                         |
-| `cargo`            | <ul><li>1.43.0 (cargo_1_43_0)</li></ul> c                                                                                                     |
+| `cargo`            | <ul><li>1.43.0 (cargo_1_43_0)</li></ul>                                                                                                      |
 | `clippy`           | <ul><li>1.43.0 (clippy_1_43_0)</li></ul>                                                                                                      |
-| `consul`           | <ul><li>1.9.0 (consul_1_9_0)</li></ul> c                                                                                                      |
+| `consul`           | <ul><li>1.9.0 (consul_1_9_0)</li></ul>                                                                                                       |
 | `go`               | <ul><li>1.14.2 (go_1_14_2)</li></ul>                                                                                                          |
 | `golangci-lint`    | <ul><li>1.27.0 (golangci-lint_1_27_0)</li></ul>                                                                                               |
 | `google-cloud-sdk` | <ul><li>268.0.0 (google-cloud-sdk_268_0_0)</li></ul>                                                                                          |
