@@ -8,6 +8,6 @@ nixpkgs.mkShell rec {
     # <talismanpkgs>
     talismanpkgs.jq_1_6
     talismanpkgs.nodejs_12_18_3
-    talismanpkgs.python_3_7_7
+    talismanpkgs.python_3_7
   ];
 }
