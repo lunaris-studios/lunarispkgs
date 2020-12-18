@@ -83,8 +83,8 @@ rec {
 
   # === python ===
 
-  python = python_3_7_7;
-  python_3_7_7 = nixpkgs.pkgs.python37;
+  python = python_3_7;
+  python_3_7 = nixpkgs.pkgs.python37;
 
   # === rust ===
 
