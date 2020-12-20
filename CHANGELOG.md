@@ -1,3 +1,17 @@
+## [1.2.1](https://github.com/talismanco/talismanpkgs/compare/v1.2.0...v1.2.1) (2020-12-20)
+
+
+### Bug Fixes
+
+* moved python 3.7.7 to 3.7.x ([bdf2180](https://github.com/talismanco/talismanpkgs/commit/bdf2180041631d6530e547ee84b2ca84f68da9eb))
+
+## [1.2.1](https://github.com/talismanco/talismanpkgs/compare/v1.2.0...v1.2.1) (2020-12-18)
+
+
+### Bug Fixes
+
+* moved python 3.7.7 to 3.7.x ([bdf2180](https://github.com/talismanco/talismanpkgs/commit/bdf2180041631d6530e547ee84b2ca84f68da9eb))
+
 # [1.2.0](https://github.com/talismanco/talismanpkgs/compare/v1.1.0...v1.2.0) (2020-12-18)
 
 
