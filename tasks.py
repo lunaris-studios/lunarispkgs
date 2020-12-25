@@ -5,6 +5,7 @@
 
 from invoke import Collection, task
 
+import dotenv
 import os
 
 # === Clean ===
@@ -24,6 +25,11 @@ def _setup(context, stage="development"):
     # contained in.
     rootdir = os.path.dirname(os.path.join(os.path.realpath(__file__)))
     context.run(f'python ./scripts/python/setup.py {rootdir} {stage}')
+
+    # Instantiate the environment variables in `.env`
+    # and `.tool-versions.env` via `dotenv`
+    dotenv.load_dotenv(".env")
+    dotenv.load_dotenv(".tool-versions.env")    
 
 # === Create ===
 

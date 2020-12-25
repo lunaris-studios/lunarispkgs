@@ -1,4 +1,3 @@
-import dotenv
 import os
 import json
 import jsonmerge
@@ -52,8 +51,3 @@ tool_versions_path = os.path.join(rootdir, ".tool-versions")
 tool_versions_str = sfile.get(tool_versions_path)
 tool_versions_env_str = senv.toolversions2env(tool_versions_str)
 sfile.write(".tool-versions.env", tool_versions_env_str)
-
-# Instantiate the environment variables in `.env`
-# and `.tool-versions.env` via `dotenv`
-dotenv.load_dotenv(".env")
-dotenv.load_dotenv(".tool-versions.env")
