@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/talismanco/talismanpkgs/compare/v1.2.1...v1.3.0) (2020-12-31)
+
+
+### Features
+
+* add go 1.14.13 ([f184208](https://github.com/talismanco/talismanpkgs/commit/f184208c97f51fd3b3b613e2287535cee43d60a3))
+
 ## [1.2.1](https://github.com/talismanco/talismanpkgs/compare/v1.2.0...v1.2.1) (2020-12-20)
 
 
