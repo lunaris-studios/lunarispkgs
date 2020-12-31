@@ -22,8 +22,8 @@ rec {
 
   # === go ===
 
-  go = go_1_14_4;
-  go_1_14_4 = nixpkgs.pkgs.go_1_14;
+  go = go_1_14_13;
+  go_1_14_13 = package "go" "1.14.13" {};
 
   # === golangci-lint ===
 
