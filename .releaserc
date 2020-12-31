@@ -13,7 +13,7 @@
     ["@google/semantic-release-replace-plugin", {
       "replacements": [
         {
-          "files": ["config/settings/global.json"],
+          "files": ["config/settings/default.json"],
           "from": "\"version\": \".*\"",
           "to": "\"version\": \"${nextRelease.version}\"",
           "countMatches": true
@@ -23,7 +23,7 @@
     ["@semantic-release/git", {
       "assets": [
         "CHANGELOG.md",
-        "config/settings/global.json"
+        "config/settings/default.json"
       ],
     }],
     "@semantic-release/github"
