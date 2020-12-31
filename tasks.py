@@ -8,30 +8,34 @@ from invoke import Collection, task
 import dotenv
 import os
 
-# === Clean ===
+# === SETUP ===
 
 
 @task()
-def _clean(context):
+def __clean(context):
     context.run(
         "find . -type f -name '.env.*' -o -name '*.env' | xargs rm -f")
 
-# === Setup ===
-
 
 @task(pre=[_clean])
-def _setup(context, stage="development"):
-    # Get the full path directory that the `tasks.py` file is
-    # contained in.
-    rootdir = os.path.dirname(os.path.join(os.path.realpath(__file__)))
+def __setup(context, stage="development"):
     context.run(f'python ./scripts/python/setup.py {rootdir} {stage}')
 
     # Instantiate the environment variables in `.env`
-    # and `.tool-versions.env` via `dotenv`
+    # and `.tool-versions.env` via `dotenv`.
     dotenv.load_dotenv(".env")
-    dotenv.load_dotenv(".tool-versions.env")    
+    dotenv.load_dotenv(".tool-versions.env")
 
-# === Create ===
+    # Set the project commit hash.
+    os.environ["PROJECT_COMMIT"] = sstrings.normalize(subprocess.check_output(
+        ["git", "rev-parse", "HEAD"]))
+
+    # Set the current operating system & CPU architecture of the current
+    # developmentenvironment
+    os.environ["PROJECT_SYSTEM"] = platform.system().lower()
+    os.environ["PROJECT_ARCH"] = platform.machine().lower()
+
+# === CREATE ===
 
 
 @task(pre=[_setup], aliases=["c"])
@@ -46,10 +50,19 @@ def create(context, name, version):
     context.run(f'touch ./pkgs/{name}/versions/{version}.nix')
 
 
-# === Update ===
+# === UPDATE ===
 
 
-@task(pre=[_setup], aliases=["univ"])
+@task(pre=[__setup], default=True, name="all")
+def update_all(context):
+    """
+    Run all `update` tasks
+    """
+    update_niv(context)
+    update_npm(context)
+
+
+@task(pre=[__setup], name="niv")
 def update_niv(context):
     """
     Update niv dependencies
@@ -57,7 +70,7 @@ def update_niv(context):
     context.run("niv update")
 
 
-@task(pre=[_setup], aliases=["unpm"])
+@task(pre=[__setup], name="npm")
 def update_npm(context):
     """
     Update npm packages
@@ -65,9 +78,9 @@ def update_npm(context):
     context.run("npm run update")
 
 
-update = Collection("update")
-update.add_task(update_niv, "niv")
-update.add_task(update_npm, "npm")
+update = Collection("update", update_all)
+update.add_task(update_niv)
+update.add_task(update_npm)
 
 #
 
