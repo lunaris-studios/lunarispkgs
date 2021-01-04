@@ -16,7 +16,7 @@
 | `cargo`            | <ul><li>1.43.0 (cargo_1_43_0)</li></ul>                                                                                                      |
 | `clippy`           | <ul><li>1.43.0 (clippy_1_43_0)</li></ul>                                                                                                      |
 | `consul`           | <ul><li>1.9.0 (consul_1_9_0)</li></ul>                                                                                                       |
-| `go`               | <ul><li>1.14.2 (go_1_14_2)</li></ul>                                                                                                          |
+| `go`               | <ul><li>1.14.13 (go_1_14_13)</li></ul>                                                                                                          |
 | `golangci-lint`    | <ul><li>1.27.0 (golangci-lint_1_27_0)</li></ul>                                                                                               |
 | `google-cloud-sdk` | <ul><li>268.0.0 (google-cloud-sdk_268_0_0)</li></ul>                                                                                          |
 | `helm`             | <ul><li>3.4.1 (helm_3_4_1)</li></ul>                                                                                                          |

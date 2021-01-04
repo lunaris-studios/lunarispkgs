@@ -15,22 +15,24 @@
 , mailcap
 , runtimeShell
 , buildPackages
-, pkgsTargetTarget
-, fetchpatch }:
+, pkgsBuildTarget
+, fetchpatch
+}:
 
 { version
 , sha256 } @args:
 
 let
+
   inherit (stdenv.lib) optionals optionalString;
 
-  # goBootstrap = runCommand "go-bootstrap" {} ''
-  #   mkdir $out
-  #   cp -rf ${buildPackages.go_bootstrap}/* $out/
-  #   chmod -R u+w $out
-  #   find $out -name "*.c" -delete
-  #   cp -rf $out/bin/* $out/share/go/bin/
-  # '';
+  goBootstrap = runCommand "go-bootstrap" {} ''
+    mkdir $out
+    cp -rf ${buildPackages.go_bootstrap}/* $out/
+    chmod -R u+w $out
+    find $out -name "*.c" -delete
+    cp -rf $out/bin/* $out/share/go/bin/
+  '';
 
   goarch = platform: {
     "i686" = "386";
@@ -40,8 +42,12 @@ let
     "armv5tel" = "arm";
     "armv6l" = "arm";
     "armv7l" = "arm";
+    "powerpc64le" = "ppc64le";
   }.${platform.parsed.cpu.name} or (throw "Unsupported system");
 
+  # We need a target compiler which is still runnable at build time,
+  # to handle the cross-building case where build != host == target
+  targetCC = pkgsBuildTarget.targetPackages.stdenv.cc;
 in
 
 stdenv.mkDerivation rec {
@@ -49,9 +55,9 @@ stdenv.mkDerivation rec {
 
   pname = "go";
 
+
   src = fetchurl {
     inherit sha256;
-    
     url = "https://dl.google.com/go/go${version}.src.tar.gz";
   };
 
@@ -183,11 +189,11 @@ stdenv.mkDerivation rec {
   # {CC,CXX}_FOR_TARGET must be only set for cross compilation case as go expect those
   # to be different from CC/CXX
   CC_FOR_TARGET = if (stdenv.buildPlatform != stdenv.targetPlatform) then
-      "${pkgsTargetTarget.stdenv.cc}/bin/${pkgsTargetTarget.stdenv.cc.targetPrefix}cc"
+      "${targetCC}/bin/${targetCC.targetPrefix}cc"
     else
       null;
   CXX_FOR_TARGET = if (stdenv.buildPlatform != stdenv.targetPlatform) then
-      "${pkgsTargetTarget.stdenv.cc}/bin/${pkgsTargetTarget.stdenv.cc.targetPrefix}c++"
+      "${targetCC}/bin/${targetCC.targetPrefix}c++"
     else
       null;
 
@@ -201,7 +207,7 @@ stdenv.mkDerivation rec {
   # Some tests assume things like home directories and users exists
   GO_BUILDER_NAME = "nix";
 
-  # GOROOT_BOOTSTRAP="${goBootstrap}/share/go";
+  GOROOT_BOOTSTRAP="${goBootstrap}/share/go";
 
   postConfigure = ''
     export GOCACHE=$TMPDIR/go-cache
@@ -210,8 +216,11 @@ stdenv.mkDerivation rec {
 
     export PATH=$(pwd)/bin:$PATH
 
+    ${optionalString (stdenv.buildPlatform != stdenv.targetPlatform) ''
     # Independent from host/target, CC should produce code for the building system.
+    # We only set it when cross-compiling.
     export CC=${buildPackages.stdenv.cc}/bin/cc
+    ''}
     ulimit -a
   '';
 
@@ -219,7 +228,7 @@ stdenv.mkDerivation rec {
     (cd src && ./make.bash)
   '';
 
-  doCheck = stdenv.hostPlatform == stdenv.targetPlatform && !stdenv.isDarwin;
+  doCheck = false;
 
   checkPhase = ''
     runHook preCheck
@@ -253,12 +262,14 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  # disallowedReferences = [ goBootstrap ];
+  disallowedReferences = [ goBootstrap ];
 
   meta = with stdenv.lib; {
+    branch = "1.14";
     homepage = "http://golang.org/";
     description = "The Go Programming language";
     license = licenses.bsd3;
+    maintainers = teams.golang.members;
     platforms = platforms.linux ++ platforms.darwin;
   };
 }
